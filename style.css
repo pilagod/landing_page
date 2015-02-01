@@ -81,7 +81,7 @@ a>label {
 
 .line {
     display: block;
-    margin: 0px 0px;
+    margin: 10px 0px;
     height: 0px;
     border: 2px solid white;
     border-radius: 2px;
