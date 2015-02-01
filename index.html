@@ -37,7 +37,7 @@
             <form id="apply" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
                 <div class="row">
                     <div class="row col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10">
-                        <input type="text" class="form-control email-input" name="email" id="email" placeholder="Leave your email to get informed!" onfocus="this.placeholder=''">
+                        <input type="text" class="form-control email-input" name="email" id="email" placeholder="Leave your email!" onfocus="this.placeholder=''">
                     </div>
                     <div class="row col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10 margin-bottom">
                         <input type="submit" id="submit" class="btn btn-primary" style="width: 40%;" value="Sign Up">
@@ -204,7 +204,7 @@
                 }
             });
             $('#email').val("");
-            $('#email').attr("placeholder", "Leave your email to get informed!");
+            $('#email').attr("placeholder", "Leave your email!");
         }
         else {
             alert("email format error");
