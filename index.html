@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background">
+    </div>
+
+    <section id="top">
+        <div class="container">
+            <div class="row" style="width: 150px; margin: 10px auto;">
+                <img src="header2.png" style="width: 100%;">
+            </div>
+            <div class="row margin-bottom">
+                <div class="col-xs-12 col-sm-8 pull-right line"></div>
+                <div class="margin-bottom">
+                    <h1 class="margin-top-topic margin-bottom">2015HackNTU</h1>
+
+                    <h4 class="margin-bottom slogan">Make Changes Happen</h4>
+
+
+                    <h3>8/21-23 Hackathon</h3>
+                    <h3>8/24-25 Hacker Summit</h3>
+                    <h3>@National Taiwan University</h3>
+
+                    <h3 id="span_time" style="max-height: 20px"></h3>
+                </div>
+                <div class="col-xs-12 col-sm-8 line"></div>
+            </div>
+            <form id="apply" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+                <div class="row">
+                    <div class="row col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
+                        <input type="text" class="form-control email-input" name="email" id="email" placeholder="Interested？Leave your Email！" onfocus="this.placeholder=''">
+                    </div>
+                    <div class="row col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8 margin-bottom">
+                        <input type="submit" id="submit" class="btn btn-primary" style="width: 40%;" value="Sign Up">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--<nav id="nav" class="navbar navbar-default nav-default-style">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<ul class="nav navbar-nav col-xs-12">-->
+                    <!--<li class="col-xs-offset-1 col-xs-2 nav-active"><a onclick="showContent('hackathon', '1');"><label>Hackathon</label></a></li>-->
+                    <!--<li class="col-xs-2"><a onclick="showContent('hackntu', '2');"><label>HackNTU</label></a></li>-->
+                    <!--<li class="col-xs-2"><a onclick="showContent('schedule', '3');"><label>Schedule</label></a></li>-->
+                    <!--<li class="col-xs-2"><a onclick="showContent('FAQ', '4');"><label>FAQ</label></a></li>-->
+                    <!--<li class="col-xs-2"><a onclick="showContent('sponsor', '5');"><label>Sponsor</label></a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        <!--</div>-->
+         <!--&lt;!&ndash;style="background-color: wheat; height: 50px; text-align: center">&ndash;&gt;-->
+    <!--</nav>-->
+
+    <!--<div id="main" class="debug-pink" style="width: 100%; height: 768px;">-->
+        <!--<section id="hackathon">-->
+            <!--<div class="container">-->
+                <!--<h2>What is Hackathon</h2>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <!--<section id="hackntu">-->
+            <!--<div class="container">-->
+                <!--<h2>What is HackNTU</h2>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <!--<section id="schedule">-->
+            <!--<div class="container">-->
+                <!--<h2>Schedule and Timeline</h2>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <!--<section id="FAQ">-->
+            <!--<div class="container">-->
+                <!--<h2>FAQ</h2>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <!--<section id="sponsor">-->
+            <!--<div class="container">-->
+                <!--<h2>Sponsor</h2>-->
+            <!--</div>-->
+        <!--</section>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash;<section id="Sponsor" class="debug-white" style="height: 500px;">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="container" style="height: 200px; text-align: left">&ndash;&gt;-->
+            <!--&lt;!&ndash;<h1>Sponsor</h1>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</section>&ndash;&gt;-->
+
+    <!--<footer class="debug" style="height: 200px;">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<h3>-->
+                    <!--We Are HackNTU-->
+                    <!--<a target="_blank" href="https://www.facebook.com/hackNTU"><img src="fb_icon.png" style="width: 30px"></a>-->
+                <!--</h3>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</footer>-->
+
+
+</body>
+<!--<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>-->
+<script src="jquery-1.11.2.min.js"></script>
+<script>
+    //time_to_end_date();
+//    $(document).ready(function(){
+//        var nav_offsetY = $('#nav').offset().top - $('#nav').height();
+//        $(window).scroll(function(){
+//            if($(document).scrollTop() >= nav_offsetY){
+//                if(!$('#nav').hasClass("navbar-fixed-top")){
+//                    $('#nav').addClass("navbar-fixed-top");
+//                }
+//            }
+//            else if($(document).scrollTop() < nav_offsetY){
+//                if($('#nav').hasClass("navbar-fixed-top")){
+//                    $('#nav').removeClass("navbar-fixed-top");
+//                }
+//            }
+//        });
+//    });
+
+    function showContent(section_id, tab_id){
+        $('#main>section').css('display', 'none');
+        $('#nav li').removeClass('nav-active');
+        $('#nav li:nth-child(' + tab_id + ')').addClass('nav-active');
+        $('#' + section_id).css('display', 'block');
+
+        var scrollTop;
+        if($('#nav').hasClass("navbar-fixed-top")){
+            scrollTop = $('#main').offset().top - $('#nav').height();
+        }
+        else{
+            scrollTop = $('#main').offset().top - $('#nav').height() * 2;
+        }
+
+        $('html, body').stop().animate({
+            'scrollTop': scrollTop
+        }, 500, 'swing');
+    }
+
+    function time_to_end_date(){
+        var startDate = new Date();
+        var endDate = new Date(2015,8,31,0,0);
+        var spantime = (endDate - startDate)/1000;
+        var interval_fun = setIntervalAndExecute(cal, 1000);
+
+        function cal(){
+            spantime --;
+            if(spantime == 0){
+                clearInterval(interval_fun);
+            }
+            var d = Math.floor(spantime / (24 * 3600));
+            var h = Math.floor((spantime % (24*3600))/3600);
+            var m = Math.floor((spantime % 3600)/(60));
+            var s = Math.floor(spantime%60);
+            str = d + " Days " + h + " Hours " + m + " Mins " + s + " Secs ";
+            $('#span_time').text(str);
+            var nav_offsetY = $('#nav').offset().top - $('#nav').height();
+        }
+
+    }
+
+    function setIntervalAndExecute(fn, t) {
+        fn();
+        return(setInterval(fn, t));
+    }
+
+    function postContactToGoogle(){
+        var email = $('#email').val();
+        alert(validateEmail(email));
+        alert(email);
+
+        if (validateEmail(email)) {
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1U6T9OdjdWTSVqwz2HGiih7cViRoNyq78_0Ed0hHlEjw/formResponse",
+                data: {"entry.761531259" : email},
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function (){
+                        //Success message
+                        alert("Thank you for your submit!");
+                    },
+                    200: function (){
+                        //Success Message
+                        alert("Thank you for your submit!");
+                    }
+                }
+            });
+            $('#email').val("");
+            $('#email').attr("placeholder", "Interested？Leave your Email！");
+        }
+        else {
+            alert("email format error");
+            //Error message
+        }
+
+    }
+
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+//    $('#submit').click(function(){
+//        var sheet = SpreadsheetApp.getActiveSheet();
+//        sheet.appendRow(['Cotton Sweatshirt XL', 'css004']);
+//    });
+
+
+</script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
+</html>
