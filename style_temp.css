@@ -52,7 +52,7 @@ header {
 #ntu {
     position: absolute;
     text-align: right !important;
-    margin-top: -7rem;
+    margin-top: -10rem;
     margin-bottom: 3rem;
     /*margin-left: 15em;*/
     width: 6rem;
@@ -204,7 +204,7 @@ header {
 }
 
 .div-hr {
-    height: 0.02em;
+    height: 0.1em;
 }
 
 .margin-top {
