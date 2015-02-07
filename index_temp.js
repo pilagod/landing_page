@@ -136,7 +136,8 @@
 
     function setNtuPosition(){
         var mainpic_offsetX = $('#mainpic').offset().left - 16*5;
-        $('#ntu').offset({left: mainpic_offsetX});
+        var mainpic_offsetY = $('#mainpic').offset().top;
+        $('#ntu').offset({top: mainpic_offsetY, left: mainpic_offsetX});
     }
 
     function init(){
