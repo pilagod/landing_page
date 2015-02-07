@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2015HackNTU</title>
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style_temp.css">
+</head>
+<body ng-app="Index">
+    <div ng-controller="IndexCtrl">
+        <nav>
+            <ul>
+                <li></li>
+            </ul>
+        </nav>
+        <header>
+            <img id="mainpic">
+            <h2 id="slogan">Make Changes Happen</h2>
+            <h3>
+                8/21-23 Hackathon、8/24-25 Hacker Summit<br>
+                @National Taiwan University
+            </h3>
+
+            <div class="container margin-top">
+                <div class="row">
+                    <!--<input type="button" id="btn_register" ng-class="{'show': !register_show, 'hide': register_show}" class="col-xs-offset-3 col-xs-6 col-sm-offset-4 col-sm-4" value="REGISTRATION" ng-click="register_show = !register_show">-->
+                    <!--<div ng-class="{'show': register_show, 'hide': !register_show}" class="col-xs-offset-3 col-xs-6 col-sm-offset-4 col-sm-4" style="padding: 0em;">-->
+                    <!--<input type="text" id="txt_email" class="form-control " placeholder="Leave Your Email" onclick="this.placeholder=''">-->
+                    <!--</div>-->
+                    <div class="row col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 input-group">
+                        <input type="text" id="txt_email" ng-class="{true: 'txt_email-after', false: 'txt_email-before'}[signup_show]" class="form-control">
+                        <div ng-class="{true: 'div_signup-after', false: 'div_signup-before'}[signup_show]" class="input-group-btn">
+                            <input type="button" id="btn_signup" ng-class="{true: 'btn_signup-after', false: 'btn_signup-before'}[signup_show]" class="form-control btn btn-warning" value="REGISTRATION" ng-click="signupOnClick()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+        <section id="intro">
+
+        </section>
+
+        <section id="faq" class="container">
+            <div class="row">
+            </div>
+        </section>
+
+        <div id="message" ng-class="[{1: 'alert-danger', 2: 'alert-success'}[message_type], {true: 'message-show', false: 'message-hide'}[message_show]]" class="alert alert-dismissible" role="alert">
+            <button type="button" class="close" aria-label="Close" ng-click="message_show = false"><span aria-hidden="true">&times;</span></button>
+            <div ng-show="message_type==1">
+                <strong>Error!</strong><br> Email Format Error.
+            </div>
+            <div ng-show="message_type==2">
+                <strong>Success!</strong><br> Thanks For Your Subscription.
+            </div>
+            <!--For success -> Thanks for your subscription-->
+        </div>
+    </div>
+
+    <!--[{1: 'alert-danger', 2: 'alert-success'}[message_type], {true: 'message-show', false: 'message-hide'}[message_show]]-->
+    <!--{'alert-danger': (message_type==1), 'alert-success': (message_type==2), 'message-show': message_show, 'message-hide': !message_show}-->
+
+</body>
+<script type="text/javascript" src="./jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="./angular.min.js"></script>
+<script type="text/javascript" src="./index_temp_app.js"></script>
+<script type="text/javascript" src="./index_temp.js"></script>
+<script>
+</script>
+</html>
