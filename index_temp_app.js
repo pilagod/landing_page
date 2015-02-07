@@ -3,6 +3,24 @@
  */
 var index = angular.module('Index', []);
 
+//index.directive('focus', function($timeout) {
+//        return {
+//            scope : {
+//                trigger : '@focus'
+//            },
+//            link : function(scope, element) {
+//                scope.$watch('trigger', function(value) {
+//                    if (value === "true") {
+//                        $timeout(function() {
+//                            element[0].focus();
+//                        });
+//                    }
+//                });
+//            }
+//        };
+//    }
+//);
+
 index.controller('IndexCtrl', ['$scope', '$location', '$timeout', function($scope, $location, $timeout){
     $scope.signup_show = false;
 
@@ -46,9 +64,7 @@ index.controller('IndexCtrl', ['$scope', '$location', '$timeout', function($scop
     $scope.registrationOnClick = function(){
         $scope.signup_show = true;
         $('#btn_signup').attr('value', 'Sign Up');
-        $('#txt_email').focus(function(){
-            $(this).select();
-        });
+        setTimeout(function(){$('#txt_email').focus();}, 700);
 
         $scope.signupOnClick = $scope.postContactToGoogle;
     };

@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2015HackNTU</title>
-    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./style_temp.css">
 </head>
 <body ng-app="Index">
+    <canvas id="canvas" style="position: fixed; top:0; left:0; z-index: 50;"></canvas>
     <div ng-controller="IndexCtrl">
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-        <header>
-            <img id="mainpic">
-            <h2 id="slogan">Make Changes Happen</h2>
-            <h3>
-                8/21-23 Hackathon、8/24-25 Hacker Summit<br>
-                @National Taiwan University
-            </h3>
+        <!--<nav>-->
+            <!--<ul>-->
+                <!--<li></li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+        <header class="font-HelveticaNeueLTPro-Th">
+            <img id="mainpic" src="./imgs/mainpic.png">
+
+            <div id="ntu">
+                <h3 class="font-bold">National Taiwan University</h3>
+            </div>
+            <h2 id="slogan" class="clear-both">MAKE CHANGES HAPPEN</h2>
+            <div>
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-2">
+                        <h3 class="font-bold">AUG 21-23</h3>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-2">
+                        <h3 class="font-bold">AUG 24-25</h3>
+                    </div>
+                </div>
+
+                <div class="row margin-none" >
+                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-2">
+                        <div class="background-3 div-hr"></div>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-2">
+                        <div class="background-3 div-hr"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-2">
+                        <h3 class="font-bold">Hackathon</h3>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-2">
+                        <h3 class="font-bold">Summit</h3>
+                    </div>
+                </div>
+            </div>
 
             <div class="container margin-top">
                 <div class="row">
@@ -29,10 +58,10 @@
                     <!--<div ng-class="{'show': register_show, 'hide': !register_show}" class="col-xs-offset-3 col-xs-6 col-sm-offset-4 col-sm-4" style="padding: 0em;">-->
                     <!--<input type="text" id="txt_email" class="form-control " placeholder="Leave Your Email" onclick="this.placeholder=''">-->
                     <!--</div>-->
-                    <div class="row col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 input-group">
+                    <div class="row col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4 input-group">
                         <input type="text" id="txt_email" ng-class="{true: 'txt_email-after', false: 'txt_email-before'}[signup_show]" class="form-control" placeholder="Leave Your Email">
                         <div ng-class="{true: 'div_signup-after', false: 'div_signup-before'}[signup_show]" class="input-group-btn">
-                            <input type="button" id="btn_signup" ng-class="{true: 'btn_signup-after', false: 'btn_signup-before'}[signup_show]" class="form-control btn btn-warning" value="REGISTRATION" ng-click="signupOnClick()">
+                            <input type="button" id="btn_signup" ng-class="{true: 'btn_signup-after', false: 'btn_signup-before'}[signup_show]" class="form-control btn btn-danger" value="REGISTRATION" ng-click="signupOnClick()">
                         </div>
                     </div>
                 </div>
@@ -61,6 +90,7 @@
         </div>
     </div>
 
+    <div style="height: 1000px"></div>
     <!--[{1: 'alert-danger', 2: 'alert-success'}[message_type], {true: 'message-show', false: 'message-hide'}[message_show]]-->
     <!--{'alert-danger': (message_type==1), 'alert-success': (message_type==2), 'message-show': message_show, 'message-hide': !message_show}-->
 
