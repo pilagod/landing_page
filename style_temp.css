@@ -65,6 +65,7 @@ header {
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     padding: 0em;
+    font-size: 1.8rem;
 
     border-color: rgba(191, 26, 32, 0.8);
     box-shadow: 0 5px 5px rgba(191, 26, 32, 0.075) inset, 0 0 30px rgba(191, 26, 32, 0.6);
@@ -81,6 +82,7 @@ header {
 
 #txt_email, #btn_signup {
     height: 2.5em;
+
 }
 
 .txt_email-before {
@@ -91,7 +93,6 @@ header {
 .txt_email-after {
     width: 80%;
     display: block;
-
 
     -webkit-transition: all 0.6s ease-in;
     -moz-transition: all 0.6s ease-in;
@@ -123,6 +124,7 @@ header {
 .btn_signup-after {
     border-top-right-radius: 1em !important;
     border-bottom-right-radius: 1em !important;
+    font-size: 1.8rem;
 
     -webkit-transition: all 0.6s ease-in;
     -moz-transition: all 0.6s ease-in;
