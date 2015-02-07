@@ -51,7 +51,6 @@ header {
 
 #ntu {
     position: absolute;
-    text-align: right !important;
     margin-top: -10rem;
     margin-bottom: 3rem;
     /*margin-left: 15em;*/
@@ -225,6 +224,10 @@ header {
 
 .font-bold {
     font-weight: bold;
+}
+
+.text-align-right {
+    text-align: right !important;
 }
 
 .background-1 {
