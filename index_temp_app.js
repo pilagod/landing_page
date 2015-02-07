@@ -46,6 +46,10 @@ index.controller('IndexCtrl', ['$scope', '$location', '$timeout', function($scop
     $scope.registrationOnClick = function(){
         $scope.signup_show = true;
         $('#btn_signup').attr('value', 'Sign Up');
+        $('#txt_email').focus(function(){
+            $(this).select();
+        });
+
         $scope.signupOnClick = $scope.postContactToGoogle;
     };
 
