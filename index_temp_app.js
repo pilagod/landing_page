@@ -71,7 +71,7 @@ index.controller('IndexCtrl', ['$scope', '$location', '$timeout', function($scop
 
     $scope.signupOnClick = $scope.registrationOnClick;
 
-    $('#message').css('display', '');
+    $('#message').css('display', 'block');
 }]);
 
 function validateEmail(email) {
