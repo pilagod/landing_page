@@ -394,5 +394,8 @@ footer {
     #canvas {
         display: none;
     }
+    #mainpic {
+        height: 14em;
+    }
 }
 
