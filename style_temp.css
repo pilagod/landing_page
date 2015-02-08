@@ -19,6 +19,7 @@ body {
 
 p {
     text-align: left;
+    padding: 1.3em;
     font-size: 1em;
 
     -webkit-webkit-hyphens: auto;
@@ -42,6 +43,10 @@ h3 {
 
 h4 {
     font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
 }
 
 div {
@@ -90,8 +95,6 @@ header {
 }
 
 #btn_signup {
-    /*border-top-right-radius: 1em;*/
-    /*border-bottom-right-radius: 1em;*/
     color: white;
     z-index: 999;
     padding: 0em;
@@ -162,10 +165,57 @@ header {
 
 /* FAQ */
 #faq {
+    font-family: "Helvetica Neue";
     text-align: center;
     padding: 1em;
     background-color: rgba(191, 26, 32, 1);
 }
+
+#faq .row>div {
+    display: table;
+    z-index: 100;
+}
+
+#faq .row>div:hover div.arrow-down {
+    display: block;
+}
+
+#faq .row header {
+    display: table-row;
+    color: rgba(98, 15, 20, 1);
+    height: 5rem;
+    background-color: rgba(245, 245, 245, 1);
+}
+
+#faq .row header>div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.3em;
+}
+
+#faq .row article {
+    color: #f5f5f5;
+    background-color: rgba(98, 15, 20, 1);
+
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+/*#faq .row:nth-child(1) article{*/
+    /*height: 15em;*/
+/*}*/
+
+/*#faq .row:nth-child(2) article{*/
+    /*height: 17em;*/
+/*}*/
+
+/*#faq .row:nth-child(3) article{*/
+    /*height: 21em;*/
+/*}*/
+
+/*#faq .row:nth-child(4) article{*/
+    /*height: 11em;*/
+/*}*/
 
 /* message */
 
@@ -196,23 +246,11 @@ header {
 .message-hide {
     opacity: 0;
     z-index: -999;
-    /*-webkit-transition: all 0.5s ease-in;*/
-    /*-moz-transition: all 0.5s ease-in;*/
-    /*-ms-transition: all 0.5s ease-in;*/
-    /*-o-transition: all 0.5s ease-in;*/
-    /*transition: all 0.5s ease-in;*/
 }
 
 .message-show {
     -webkit-animation: show-then-vanish 5s forwards;
     animation: show-then-vanish 5s forwards;
-    /*opacity: 0.7;*/
-    /*z-index: 999;*/
-    /*-webkit-transition: all 0.5s ease-in;*/
-    /*-moz-transition: all 0.5s ease-in;*/
-    /*-ms-transition: all 0.5s ease-in;*/
-    /*-o-transition: all 0.5s ease-in;*/
-    /*transition: all 0.5s ease-in;*/
 }
 
 @keyframes show-then-vanish {
@@ -310,6 +348,19 @@ header {
 .background-5 {
     /*#F0EB3A rgb(240, 235, 58)*/
     background-image: url("./imgs/background5.png");
+}
+
+.arrow-down {
+    display: none;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    margin: 0em auto;
+    padding: 0em;
+    border-left: 2em solid transparent;
+    border-right: 2em solid transparent;
+
+    border-top: 2em solid #f5f5f5;
 }
 
 
