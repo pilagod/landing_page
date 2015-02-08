@@ -259,17 +259,17 @@ footer {
 }
 
 @keyframes show-then-vanish {
-    0% { opacity: 0; z-index: 999;}
-    30% { opacity: 0.7;}
-    70% { opacity: 0.7;}
-    100% { opacity: 0; z-index: -999;}
+    0% { opacity: 0; z-index: 999; }
+    30% { opacity: 0.7; }
+    70% { opacity: 0.7; }
+    100% { opacity: 0; }
 }
 
 @-webkit-keyframes show-then-vanish {
     0% { opacity: 0; z-index: 999;}
-    30% { opacity: 0.7;}
-    70% { opacity: 0.7;}
-    100% { opacity: 0; z-index: -999;}
+    30% { opacity: 0.7; }
+    70% { opacity: 0.7; }
+    100% { opacity: 0; }
 }
 
 /* global */

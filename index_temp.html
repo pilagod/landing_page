@@ -243,7 +243,7 @@
             </div>
         </section>
 
-        <div id="message" ng-class="[{1: 'alert-danger', 2: 'alert-success'}[message_type], {true: 'message-show', false: 'message-hide'}[message_show]]" class="alert alert-dismissible" role="alert">
+        <div id="message" ng-class="[{1: 'alert-danger', 2: 'alert-success'}[message_type], {true: 'message-show', false: 'message-hide'}[message_show]]" class="alert alert-dismissible" role="alert" style="display: none">
             <button type="button" class="close" aria-label="Close" ng-click="message_show = false"><span aria-hidden="true">&times;</span></button>
             <div ng-show="message_type==1">
                 <strong>Error!</strong><br> Email Format Error.
