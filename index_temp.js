@@ -147,9 +147,15 @@
             renderLogo();
             setNtuPosition();
         });
+
+        $('#message').removeClass('hide');
+        $('#div_signup').removeClass('hide');
     }
 
-    init();
+    $(document).ready(function(){
+        init();
+    });
+
 
 }());
 

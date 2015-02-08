@@ -86,6 +86,16 @@ footer {
     font-family: "HelveticaNeueLTPro Th";
 }
 
+#info * {
+    display: inline-block;
+}
+
+#info h4 {
+    width: 4em;
+    padding-bottom: 0.1em;
+    border-bottom: 0.05em solid rgba(191, 26, 32, 0.8);
+}
+
 #txt_email {
     text-align: center;
     z-index: 999;
@@ -287,11 +297,11 @@ footer {
 }
 
 .margin-top {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 .margin-bottom {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .margin-none {
