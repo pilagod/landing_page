@@ -3,13 +3,29 @@
     src: url("./font/HelveticaNeueLTPro-Th.otf");
 }
 
+@font-face {
+    font-family: "Bauhaus 93";
+    src: url("./font/Bauhaus%2093.ttf");
+}
+
+html {
+
+}
+
 body {
-    font-size: 16px;
+    font-size: 22px;
     font-family: "Open Sans", '微軟正黑體', sans-serif;
 }
 
 p {
+    text-align: left;
     font-size: 1em;
+
+    -webkit-webkit-hyphens: auto;
+    -moz-webkit-hyphens: auto;
+    -ms-webkit-hyphens: auto;
+    -o-webkit-hyphens: auto;
+    webkit-hyphens: auto;
 }
 
 h1 {
@@ -21,7 +37,14 @@ h2 {
 }
 
 h3 {
+    font-size: 1.6em;
+}
+
+h4 {
     font-size: 1.4em;
+}
+
+div {
 }
 
 /* nav */
@@ -42,17 +65,11 @@ ul {
 header {
     position: relative;
     text-align: center;
-    margin: 2em 0em;
+    margin: 1.4em 0em;
 }
 
 #mainpic {
-    height: 19em;
-}
-
-#ntu {
-    position: absolute;
-    /*margin-left: 15em;*/
-    width: 5rem;
+    height: 18em;
 }
 
 #slogan {
@@ -133,6 +150,23 @@ header {
     transition: all 0.6s ease-in;
 }
 
+/* Intro */
+#intro {
+    text-align: center;
+    color: white;
+    padding: 1em;
+    background-image: url("./imgs/intro_background.png");
+    background-position: center top;
+    background-size: cover;
+}
+
+/* FAQ */
+#faq {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(191, 26, 32, 1);
+}
+
 /* message */
 
 #message {
@@ -205,6 +239,10 @@ header {
     height: 0.1em;
 }
 
+.div-border-bottom {
+    border-bottom: 0.1em solid rgb(236, 101, 26);
+}
+
 .margin-top {
     margin-top: 2em;
 }
@@ -217,8 +255,20 @@ header {
     margin: 0em;
 }
 
-.font-HelveticaNeueLTPro-Th{
+.padding-none {
+    padding: 0em;
+}
+
+.font-HelveticaNeueLTPro-Th {
     font-family: "HelveticaNeueLTPro Th";
+}
+
+.font-Bauhaus-93 {
+    font-family: "Bauhaus 93";
+}
+
+.font-white {
+    color: white;
 }
 
 .font-bold {
@@ -227,6 +277,14 @@ header {
 
 .text-align-right {
     text-align: right !important;
+}
+
+.text-align-center {
+    text-align: center !important;
+}
+
+.text-align-left {
+    text-align: left !important;
 }
 
 .background-1 {

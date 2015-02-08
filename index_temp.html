@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <title>2015HackNTU</title>
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./bootstrap.min.css">
@@ -17,53 +17,40 @@
             <!--</ul>-->
         <!--</nav>-->
         <header class="font-HelveticaNeueLTPro-Th">
-            <img id="mainpic" src="./imgs/mainpic.png">
+            <img id="mainpic" src="imgs/mainpic.png">
 
-            <!--<div id="ntu" class="font-bold ">-->
-                <!--<h3 class="margin-none text-align-right">National</h3>-->
-                <!--<h3 class="margin-none text-align-right">Taiwan</h3>-->
-                <!--<h3 class="margin-none text-align-right">University</h3>-->
-            <!--</div>-->
-            <h2 id="slogan" class="clear-both">MAKE CHANGES HAPPEN</h2>
+            <h3 id="slogan" class="clear-both">MAKE CHANGES HAPPEN</h3>
             <div>
                 <div class="row">
-                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-2">
-                        <h3 class="font-bold">AUG 21-23</h3>
+                    <div class="col-xs-offset-4 col-xs-1 col-sm-offset-4 col-sm-1 padding-none text-align-right">
+                        <h4 class="font-bold">AUG</h4>
                     </div>
-                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-2">
-                        <h3 class="font-bold">AUG 24-25</h3>
+                    <div class="col-xs-2 col-sm-2 padding-none">
+                        <img src="imgs/logo.png" height="80">
                     </div>
-                </div>
-
-                <div class="row margin-none" >
-                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-2">
-                        <div class="background-3 div-hr"></div>
-                    </div>
-                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-2">
-                        <div class="background-3 div-hr"></div>
+                    <div class="col-xs-offset-0 col-xs-2 col-sm-offset-0 col-sm-2 padding-none text-align-left">
+                        <h4 class="font-bold">28-30</h4>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-2">
-                        <h3 class="font-bold">Hackathon</h3>
+                    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-4 col-sm-1 padding-none">
+                        <div class="background-3 div-hr"></div>
                     </div>
-                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-2">
-                        <h3 class="font-bold">Summit</h3>
+
+                    <div class="col-xs-offset-2 col-xs-4 col-sm-offset-2 col-sm-1 padding-none">
+                        <div class="background-3 div-hr"></div>
                     </div>
                 </div>
+
             </div>
 
             <div class="container margin-top">
                 <div class="row">
-                    <!--<input type="button" id="btn_register" ng-class="{'show': !register_show, 'hide': register_show}" class="col-xs-offset-3 col-xs-6 col-sm-offset-4 col-sm-4" value="REGISTRATION" ng-click="register_show = !register_show">-->
-                    <!--<div ng-class="{'show': register_show, 'hide': !register_show}" class="col-xs-offset-3 col-xs-6 col-sm-offset-4 col-sm-4" style="padding: 0em;">-->
-                    <!--<input type="text" id="txt_email" class="form-control " placeholder="Leave Your Email" onclick="this.placeholder=''">-->
-                    <!--</div>-->
                     <div class="row col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4 input-group">
                         <input type="text" id="txt_email" ng-class="{true: 'txt_email-after', false: 'txt_email-before'}[signup_show]" class="form-control" placeholder="Leave Your Email">
                         <div ng-class="{true: 'div_signup-after', false: 'div_signup-before'}[signup_show]" class="input-group-btn">
-                            <input type="button" id="btn_signup" ng-class="{true: 'btn_signup-after', false: 'btn_signup-before'}[signup_show]" class="form-control btn btn-danger" value="REGISTRATION" ng-click="signupOnClick()">
+                            <input type="button" id="btn_signup" ng-class="{true: 'btn_signup-after', false: 'btn_signup-before'}[signup_show]" class="form-control btn btn-danger" value="Get Notification" ng-click="signupOnClick()">
                         </div>
                     </div>
                 </div>
@@ -71,12 +58,82 @@
         </header>
 
 
-        <section id="intro">
+        <section id="intro" class="margin-none">
+            <h1 class="font-Bauhaus-93 margin-none">INTRO</h1>
+            <img src="imgs/intro_bar.png">
+            <div class="container-fluid margin-top">
+                <div class="row">
+                    <div class="pull-left">
+                        <img src="./imgs/intro_上引號.png">&nbsp
+                        <img src="./imgs/intro_上引號.png">
+                    </div>
+                </div>
 
+                <div class="row clear-both">
+                    <article class="col-xs-offset-2 col-xs-8">
+                        <p class="font-HelveticaNeueLTPro-Th">
+                            HackNTU is a carnival for Hackers aiming to bridge Asian hacker community with the world. We are not only holding a competition but also a wide variety of Summit to inspire talented youth hackers. Students around the world are invited to join their peers brainstorming crazy ideas and make them real in 40 hours.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="row">
+                    <div class="pull-right">
+                        <img src="./imgs/intro_下引號.png">&nbsp
+                        <img src="./imgs/intro_下引號.png">
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="faq" class="container">
-            <div class="row">
+        <section id="faq" class="margin-none clear-both">
+            <h1 class="font-Bauhaus-93 font-white margin-none">FAQ</h1>
+            <img src="imgs/faq_bar.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -92,7 +149,6 @@
         </div>
     </div>
 
-    <div style="height: 1000px"></div>
     <!--[{1: 'alert-danger', 2: 'alert-success'}[message_type], {true: 'message-show', false: 'message-hide'}[message_show]]-->
     <!--{'alert-danger': (message_type==1), 'alert-success': (message_type==2), 'message-show': message_show, 'message-hide': !message_show}-->
 
