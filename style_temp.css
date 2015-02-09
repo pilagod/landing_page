@@ -110,9 +110,14 @@ footer {
 }
 
 #btn_signup {
+    background-color: rgba(191, 26, 32, 1);
     color: white;
     z-index: 999;
     padding: 0em;
+}
+
+#btn_signup:hover {
+    background-color: rgba(191, 26, 32, 0.9)
 }
 
 #txt_email, #btn_signup {
@@ -159,7 +164,7 @@ footer {
 .btn_signup-after {
     border-top-right-radius: 1em !important;
     border-bottom-right-radius: 1em !important;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 
     -webkit-transition: all 0.6s ease-in;
     -moz-transition: all 0.6s ease-in;
@@ -191,21 +196,21 @@ footer {
     z-index: 100;
 }
 
-#faq .row>div:hover div.arrow-down {
-    display: block;
-}
+/*#faq .row>div:hover div.arrow-down {*/
+    /*display: block;*/
+/*}*/
 
 #faq .row header {
     display: table-row;
     color: rgba(98, 15, 20, 1);
-    height: 5rem;
+    height: 5em;
     background-color: rgba(245, 245, 245, 1);
 }
 
 #faq .row header>div {
     display: table-cell;
     vertical-align: middle;
-    padding: 0.3em;
+    padding: 0.4em;
 }
 
 #faq .row article {

@@ -6,9 +6,9 @@
     var x = Math.floor((Math.random() * 3));
     var main_pics = [];
 
-    main_pics[0] = "./imgs/mainpic1-2.png";
-    main_pics[1] = "./imgs/mainpic2-2.png";
-    main_pics[2] = "./imgs/mainpic3-2.png";
+    main_pics[0] = "./imgs/mainpic1-3.png";
+    main_pics[1] = "./imgs/mainpic2-3.png";
+    main_pics[2] = "./imgs/mainpic3-3.png";
 //    main_pics[3] = "./imgs/mainpic4.png";
 //    main_pics[4] = "./imgs/mainpic5.png";
 
