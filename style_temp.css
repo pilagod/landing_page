@@ -193,7 +193,8 @@ footer {
 
 #faq .row>div {
     display: table;
-    z-index: 100;
+    margin-bottom: 1em;
+    /*z-index: 100;*/
 }
 
 /*#faq .row>div:hover div.arrow-down {*/
