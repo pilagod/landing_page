@@ -14,9 +14,9 @@ server.listen(3000, function(){
 app.use(express.static(__dirname));
 
 app.get('/', function(req, res){
-    res.sendFile('index.html', {"root": __dirname});
+    res.sendFile('index_ver2.html', {"root": __dirname});
 });
 
-app.get('/index_temp', function(req, res){
-    res.sendFile('index_temp.html', {"root": __dirname});
-});
+//app.get('/index_temp', function(req, res){
+//    res.sendFile('index_ver2.html', {"root": __dirname});
+//});

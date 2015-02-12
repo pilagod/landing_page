@@ -32,26 +32,26 @@ index.controller('IndexCtrl', ['$scope', '$location', '$timeout', function($scop
         var email = $('#txt_email').val();
 
         if (validateEmail(email)) {
-            //Success Message
-            $scope.message_type = 2;
-            $scope.message_show = true;
-            $timeout(function(){$scope.message_show = false;}, 5000);
-//            $.ajax({
-//                url: "https://docs.google.com/forms/d/1U6T9OdjdWTSVqwz2HGiih7cViRoNyq78_0Ed0hHlEjw/formResponse",
-//                data: {"entry.761531259" : email},
-//                type: "POST",
-//                dataType: "xml",
-//                statusCode: {
-//                    0: function (){
-//                        //Success message
-//                        alert("Thanks for your submit!");
-//                    },
-//                    200: function (){
-//                        //Success Message
-//                        alert("Thanks for your submit!");
-//                    }
-//                }
-//            });
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1U6T9OdjdWTSVqwz2HGiih7cViRoNyq78_0Ed0hHlEjw/formResponse",
+                data: {"entry.761531259" : email},
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function (){
+                        //Success Message
+                        $scope.message_type = 2;
+                        $scope.message_show = true;
+                        $timeout(function(){$scope.message_show = false;}, 5000);
+                    },
+                    200: function (){
+                        //Success Message
+                        $scope.message_type = 2;
+                        $scope.message_show = true;
+                        $timeout(function(){$scope.message_show = false;}, 5000);
+                    }
+                }
+            });
         }
         else {
             //Error Message
