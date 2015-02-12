@@ -39,19 +39,16 @@ index.controller('IndexCtrl', ['$scope', '$location', '$timeout', function($scop
                 dataType: "xml",
                 statusCode: {
                     0: function (){
-                        //Success Message
-                        $scope.message_type = 2;
-                        $scope.message_show = true;
-                        $timeout(function(){$scope.message_show = false;}, 5000);
                     },
                     200: function (){
-                        //Success Message
-                        $scope.message_type = 2;
-                        $scope.message_show = true;
-                        $timeout(function(){$scope.message_show = false;}, 5000);
                     }
                 }
             });
+
+            //Success Message
+            $scope.message_type = 2;
+            $scope.message_show = true;
+            $timeout(function(){$scope.message_show = false;}, 5000);
         }
         else {
             //Error Message
