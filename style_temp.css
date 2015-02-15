@@ -290,10 +290,12 @@ footer {
 
 .message-hide {
     opacity: 0;
+    display: none;
     z-index: -999;
 }
 
 .message-show {
+    display: block;
     -webkit-animation: show-then-vanish 5s forwards;
     animation: show-then-vanish 5s forwards;
 }
