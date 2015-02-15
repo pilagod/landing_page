@@ -78,6 +78,30 @@ footer {
     background-color: rgba(0, 0, 0, 1);
 }
 
+#fb_logo {
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    padding: 0em;
+    max-width: 6rem;
+    min-width: 6rem;
+    max-height: 6rem;
+    min-height: 6rem;
+    background-color: rgba(122, 122, 122, 1);
+    border-radius: 6rem;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    z-index: 999;
+}
+
+#fb_logo:hover {
+    background-color: rgba(122, 122, 122, 0.7);
+    cursor: hand;
+    cursor: pointer;
+}
+
 #mainpic {
     height: 18em;
 }
@@ -391,14 +415,14 @@ footer {
     #canvas {
         display: none;
     }
+    #fb_logo {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     body {
-        font-size: 14px;
-    }
-    #canvas {
-        display: none;
+        font-size: 12px;
     }
     #mainpic {
         height: 14em;
