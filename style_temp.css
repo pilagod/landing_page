@@ -436,5 +436,9 @@ footer {
     #mainpic {
         height: 14em;
     }
+    #btn_signup {
+        width: 80%;
+    }
+
 }
 
