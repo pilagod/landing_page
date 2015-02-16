@@ -85,8 +85,10 @@ footer {
     padding: 0em;
     max-width: 4rem;
     min-width: 4rem;
+    width: 4rem;
     max-height: 4rem;
     min-height: 4rem;
+    height: 4rem;
     background-color: rgba(122, 122, 122, 1);
     border-radius: 4rem;
     text-align: center;
