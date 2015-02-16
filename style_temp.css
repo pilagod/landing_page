@@ -437,13 +437,13 @@ footer {
         height: 14em;
     }
     .btn_signup-before {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .btn_signup-after {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     #txt_email {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
