@@ -436,9 +436,14 @@ footer {
     #mainpic {
         height: 14em;
     }
-    #btn_signup {
-        width: 80%;
+    .btn_signup-before {
+        font-size: 1.8rem;
     }
-
+    .btn_signup-after {
+        font-size: 1.5rem;
+    }
+    #txt_email {
+        font-size: 1.5rem;
+    }
 }
 
