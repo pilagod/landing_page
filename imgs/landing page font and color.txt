@@ -1,0 +1,14 @@
+(一)font:
+
+national taiwan university、F&Q內文: HelveticaNeue 
+make changes happen、日期、registration、intro內文 : HelveticaNeueLTPro Th
+intro標題、F&Q標題: Bauhaus 93
+
+(二)color:
+
+index頁面的灰:122 122 122 (#7a7a7a)
+registration的紅、F&Q背景紅:191 26 32 (#bf1a20)
+F&Q內文紅: 98 15 20 (#620f14)
+
+(三)
+FB icon就用CSS icon就好了~~~
