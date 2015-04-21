@@ -6,6 +6,9 @@
 /*          Main Page          */
 /*******************************/
 
+
+
+
 var Navbar = React.createClass({displayName: "Navbar",
     getInitialState: function(){
         return({data: []})
@@ -22,14 +25,15 @@ var Navbar = React.createClass({displayName: "Navbar",
             }.bind(this)
         })
     },
+    handleHrefOnClick: hrefOnClick,
     render: function(){
         var linkNode = this.state.data.map(function(link, i){
             return (
                 React.createElement("li", {key: i}, 
-                    React.createElement("a", {href: link.url}, link.title)
+                    React.createElement("a", {href: link.url, onClick: this.handleHrefOnClick.bind(null, link.url)}, link.title)
                 )
             )
-        });
+        }.bind(this));
         return(
             React.createElement("nav", null, 
                 React.createElement("div", {className: "content"}, 
@@ -75,14 +79,15 @@ var Footer = React.createClass({displayName: "Footer",
             }.bind(this)
         })
     },
+    handleHrefOnClick: hrefOnClick,
     render: function(){
         var footerLinkNode = this.state.data.map(function(link, i){
             return (
                 React.createElement("li", {key: i}, 
-                    React.createElement("a", {href: link.url}, link.title)
+                    React.createElement("a", {href: link.url, onClick: this.handleHrefOnClick.bind(null, link.url)}, link.title)
                 )
             )
-        });
+        }.bind(this));
         return(
             React.createElement("footer", null, 
                 React.createElement("img", {className: "background-image", src: "/img/index/footer.png"}), 
@@ -224,3 +229,19 @@ React.render(React.createElement(Footer, {url: "/json/index/link.json"}), docume
 /*******************************/
 
 
+/*******************************/
+/*       Other Function        */
+/*******************************/
+
+function hrefOnClick(hash, e){
+    e.preventDefault();
+
+    var target = hash,
+        $target = $(target);
+
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+    }, 900, 'swing', function () {
+        window.location.hash = target;
+    });
+}

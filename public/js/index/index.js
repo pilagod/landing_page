@@ -6,6 +6,9 @@
 /*          Main Page          */
 /*******************************/
 
+
+
+
 var Navbar = React.createClass({
     getInitialState: function(){
         return({data: []})
@@ -22,14 +25,15 @@ var Navbar = React.createClass({
             }.bind(this)
         })
     },
+    handleHrefOnClick: hrefOnClick,
     render: function(){
         var linkNode = this.state.data.map(function(link, i){
             return (
                 <li key={i}>
-                    <a href={link.url}>{link.title}</a>
+                    <a href={link.url} onClick={this.handleHrefOnClick.bind(null, link.url)}>{link.title}</a>
                 </li>
             )
-        });
+        }.bind(this));
         return(
             <nav>
                 <div className="content">
@@ -75,14 +79,15 @@ var Footer = React.createClass({
             }.bind(this)
         })
     },
+    handleHrefOnClick: hrefOnClick,
     render: function(){
         var footerLinkNode = this.state.data.map(function(link, i){
             return (
                 <li key={i}>
-                    <a href={link.url}>{link.title}</a>
+                    <a href={link.url} onClick={this.handleHrefOnClick.bind(null, link.url)}>{link.title}</a>
                 </li>
             )
-        });
+        }.bind(this));
         return(
             <footer>
                 <img className="background-image" src="/img/index/footer.png"/>
@@ -224,3 +229,19 @@ React.render(<Footer url="/json/index/link.json"/>, document.getElementById('foo
 /*******************************/
 
 
+/*******************************/
+/*       Other Function        */
+/*******************************/
+
+function hrefOnClick(hash, e){
+    e.preventDefault();
+
+    var target = hash,
+        $target = $(target);
+
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+    }, 900, 'swing', function () {
+        window.location.hash = target;
+    });
+}
