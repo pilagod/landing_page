@@ -41,8 +41,8 @@ var Navbar = React.createClass({displayName: "Navbar",
                         linkNode
                     ), 
                     React.createElement("ul", {className: "pull-right"}, 
-                        React.createElement("li", null, React.createElement("a", {href: ""}, React.createElement("i", {className: "fa fa-facebook-square fa-lg"}))), 
-                        React.createElement("li", null, React.createElement("a", {href: ""}, React.createElement("i", {className: "fa fa-envelope-square fa-lg"})))
+                        React.createElement("li", null, React.createElement("a", {href: "https://www.facebook.com/hackNTU", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook-square fa-lg"}))), 
+                        React.createElement("li", null, React.createElement("a", {href: "mailto:hackntu@gmail.com"}, React.createElement("i", {className: "fa fa-envelope-square fa-lg"})))
                     )
                 )
             )
@@ -96,8 +96,8 @@ var Footer = React.createClass({displayName: "Footer",
                         footerLinkNode
                     ), 
                     React.createElement("ul", null, 
-                        React.createElement("li", null, React.createElement("a", {href: ""}, React.createElement("i", {className: "fa fa-facebook-square fa-lg"}))), 
-                        React.createElement("li", null, React.createElement("a", {href: ""}, React.createElement("i", {className: "fa fa-envelope-square fa-lg"})))
+                        React.createElement("li", null, React.createElement("a", {href: "https://www.facebook.com/hackNTU", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook-square fa-lg"}))), 
+                        React.createElement("li", null, React.createElement("a", {href: "mailto:hackntu@gmail.com"}, React.createElement("i", {className: "fa fa-envelope-square fa-lg"})))
                     )
                 ), 
                 React.createElement("div", {className: "copyright"}, 

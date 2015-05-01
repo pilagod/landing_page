@@ -41,8 +41,8 @@ var Navbar = React.createClass({
                         {linkNode}
                     </ul>
                     <ul className="pull-right">
-                        <li><a href=""><i className="fa fa-facebook-square fa-lg"></i></a></li>
-                        <li><a href=""><i className="fa fa-envelope-square fa-lg"></i></a></li>
+                        <li><a href="https://www.facebook.com/hackNTU" target="_blank"><i className="fa fa-facebook-square fa-lg"></i></a></li>
+                        <li><a href="mailto:hackntu@gmail.com"><i className="fa fa-envelope-square fa-lg"></i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -96,8 +96,8 @@ var Footer = React.createClass({
                         {footerLinkNode}
                     </ul>
                     <ul>
-                        <li><a href=""><i className="fa fa-facebook-square fa-lg"></i></a></li>
-                        <li><a href=""><i className="fa fa-envelope-square fa-lg"></i></a></li>
+                        <li><a href="https://www.facebook.com/hackNTU" target="_blank"><i className="fa fa-facebook-square fa-lg"></i></a></li>
+                        <li><a href="mailto:hackntu@gmail.com"><i className="fa fa-envelope-square fa-lg"></i></a></li>
                     </ul>
                 </div>
                 <div className="copyright">
