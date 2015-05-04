@@ -26,16 +26,16 @@ $(document).ready(function(){
                         dataType: "jsonp",
                         statusCode: {
                             0: function (){
-                                alert("Success");
+                                alert("Thank you for your subscription!");
                             },
                             200: function (){
-                                alert("Success");
+                                alert("Thank you for your subscription!");
                             }
                         }
                     });
                 }
                 else {
-                    alert("email type error");
+                    alert("Email format error!");
                 }
             };
         }
