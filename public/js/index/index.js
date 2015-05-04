@@ -114,13 +114,26 @@ var Footer = React.createClass({
 //<img src="/img/index/mentor_button.png"/>
 //<img src="/img/index/sponsor_button.png"/>
 
+//<img className="background-image" src="/img/index/bg1.png"/>
+
 var Index = React.createClass({
+    onBtnInterestedClick:function(){
+        $('#btn_interested').css('opacity', '0');
+        $('#btn_interested').css('z-index', '-99');
+        $('#txt_email').css('width', '20em');
+        $('#txt_email').css('opacity', '1');
+        $('#txt_email').css("z-index", '0');
+        //$('#txt_email').css();
+
+        //$('#txt_email').css('')
+    },
     render: function(){
         return(
             <section id="index">
                 <img className="background-image" src="/img/index/bg1.png"/>
                 <div className="text-center">
-                    <img src="/img/index/interest-01.svg"/>
+                    <img id="btn_interested" src="/img/index/interest-01-2.svg" onClick={this.onBtnInterestedClick}/>
+                    <input id="txt_email" type="text"/>
                 </div>
             </section>
         )
