@@ -123,6 +123,7 @@ var Index = React.createClass({
         $('#txt_email').css('width', '20em');
         $('#txt_email').css('opacity', '1');
         $('#txt_email').css("z-index", '0');
+        $('#txt_email').focus();
         //$('#txt_email').css();
 
         //$('#txt_email').css('')
@@ -133,7 +134,7 @@ var Index = React.createClass({
                 <img className="background-image" src="/img/index/bg1.png"/>
                 <div className="text-center">
                     <img id="btn_interested" src="/img/index/interest-01-2.svg" onClick={this.onBtnInterestedClick}/>
-                    <input id="txt_email" type="text"/>
+                    <input id="txt_email" type="text" placeholder="Enter your email to subscribe."/>
                 </div>
             </section>
         )
