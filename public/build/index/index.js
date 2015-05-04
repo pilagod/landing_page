@@ -110,15 +110,17 @@ var Footer = React.createClass({displayName: "Footer",
     }
 });
 
+//<img src="/img/index/apply_button.png"/>
+//<img src="/img/index/mentor_button.png"/>
+//<img src="/img/index/sponsor_button.png"/>
+
 var Index = React.createClass({displayName: "Index",
     render: function(){
         return(
             React.createElement("section", {id: "index"}, 
                 React.createElement("img", {className: "background-image", src: "/img/index/bg1.png"}), 
                 React.createElement("div", {className: "text-center"}, 
-                    React.createElement("img", {src: "/img/index/apply_button.png"}), 
-                    React.createElement("img", {src: "/img/index/mentor_button.png"}), 
-                    React.createElement("img", {src: "/img/index/sponsor_button.png"})
+                    React.createElement("img", {src: "/img/index/interest-01.svg"})
                 )
             )
         )
@@ -134,7 +136,7 @@ var Intro = React.createClass({displayName: "Intro",
                     React.createElement("img", {className: "pull-left", src: "/img/index/left_double_quot.png"}), 
                     React.createElement("img", {className: "pull-right", src: "/img/index/right_double_quot.png"}), 
                     React.createElement("div", null, 
-                        React.createElement("p", null, "HackNTU is a carnival for Hackers aiming to bridge Asian hacker community with the world. We are not only holding a competition but also a wide variety of Summit to inspire talented youth hackers. Students around the world are invited to join their peers brainstorming crazy ideas and make them real in 40 hours. ")
+                        React.createElement("p", null, "HackNTU holds an annual hackathon for young hackers around the world. Attending 2015HackNTU gives you an opportunity to share your innovation and create things from scratch with talented hackers from all around the world. Join us, and get inspired!")
                     )
                 )
             )
@@ -192,11 +194,12 @@ var Faq = React.createClass({displayName: "Faq",
         })
     },
     render: function(){
+        var message = "Can’t find answers to your question? Feel free to contact us through email or via Facebook messages.";
         var faqContentNode = this.state.data.map(function(faq, i){
             return (
                 React.createElement("div", {key: i, className: "text-center"}, 
-                    React.createElement("div", {className: "inner-header"}, 
-                        React.createElement("h3", null, faq.title)
+                    React.createElement("div", {className: "inner-header text-vertical-center"}, 
+                        faq.title
                     ), 
                     React.createElement("div", {className: "inner-content"}, 
                         faq.content
@@ -208,8 +211,11 @@ var Faq = React.createClass({displayName: "Faq",
             React.createElement("section", {id: "faq"}, 
                 React.createElement("img", {className: "header", src: "/img/index/FAQ.png"}), 
                 React.createElement("div", {className: "content"}, 
-                    faqContentNode
+                    faqContentNode, 
+                    React.createElement("p", null, React.createElement("b", null, React.createElement("h5", null, "Can’t find answers to your question ?"))), 
+                    React.createElement("p", null, React.createElement("b", null, React.createElement("h5", null, "Feel free to contact us through email or via Facebook messages.")))
                 )
+
             )
         )
     }

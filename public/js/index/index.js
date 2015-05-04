@@ -110,15 +110,17 @@ var Footer = React.createClass({
     }
 });
 
+//<img src="/img/index/apply_button.png"/>
+//<img src="/img/index/mentor_button.png"/>
+//<img src="/img/index/sponsor_button.png"/>
+
 var Index = React.createClass({
     render: function(){
         return(
             <section id="index">
                 <img className="background-image" src="/img/index/bg1.png"/>
                 <div className="text-center">
-                    <img src="/img/index/apply_button.png"/>
-                    <img src="/img/index/mentor_button.png"/>
-                    <img src="/img/index/sponsor_button.png"/>
+                    <img src="/img/index/interest-01.svg"/>
                 </div>
             </section>
         )
@@ -134,7 +136,7 @@ var Intro = React.createClass({
                     <img className="pull-left" src="/img/index/left_double_quot.png"/>
                     <img className="pull-right" src="/img/index/right_double_quot.png"/>
                     <div>
-                        <p>HackNTU is a carnival for Hackers aiming to bridge Asian hacker community with the world. We are not only holding a competition but also a wide variety of Summit to inspire talented youth hackers. Students around the world are invited to join their peers brainstorming crazy ideas and make them real in 40 hours. </p>
+                        <p>HackNTU holds an annual hackathon for young hackers around the world. Attending 2015HackNTU gives you an opportunity to share your innovation and create things from scratch with talented hackers from all around the world. Join us, and get inspired!</p>
                     </div>
                 </div>
             </section>
@@ -192,11 +194,12 @@ var Faq = React.createClass({
         })
     },
     render: function(){
+        var message = "Can’t find answers to your question? Feel free to contact us through email or via Facebook messages.";
         var faqContentNode = this.state.data.map(function(faq, i){
             return (
                 <div key={i} className="text-center">
-                    <div className="inner-header">
-                        <h3>{faq.title}</h3>
+                    <div className="inner-header text-vertical-center">
+                        {faq.title}
                     </div>
                     <div className="inner-content">
                         {faq.content}
@@ -209,7 +212,10 @@ var Faq = React.createClass({
                 <img className="header" src="/img/index/FAQ.png"/>
                 <div className="content">
                     {faqContentNode}
+                    <p><b><h5>Can’t find answers to your question &#63;</h5></b></p>
+                    <p><b><h5>Feel free to contact us through email or via Facebook messages.</h5></b></p>
                 </div>
+
             </section>
         )
     }

@@ -4,7 +4,7 @@
 $(document).ready(function(){
     $(window).on('scroll', function(){
         if($(window).scrollTop() > 5){
-            $('#navbar').css('background-color', "rgba(241, 139, 0, 0.7)");
+            $('#navbar').css('background-color', "rgba(250, 190, 1, 0.8)");
         }else {
             $('#navbar').css('background-color', "transparent");
         }
