@@ -253,7 +253,7 @@ section {
 #intro > .content > div > p {
     /*font-size: 1.4em;*/
     font-size: 1.1em;
-    /*line-height: 1.9;*/
+    line-height: 1.7;
 }
 
 /*******************************/
@@ -320,7 +320,7 @@ section {
     position: absolute;
     color: #ffffff;
     bottom: 7%;
-    left: 25.5%;
+    left: 26.5%;
 }
 
 /*******************************/
