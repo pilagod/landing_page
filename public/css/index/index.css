@@ -159,7 +159,13 @@ section {
     background-repeat: no-repeat;
 }
 
+#index a {
+    width: auto;
+    height: auto;
+}
+
 #index #btn_apply {
+    width: auto;
     height: 3em;
     margin-top: -10em;
     opacity: 1;
@@ -228,9 +234,9 @@ section {
     /*transition: all 0.5s ease-in-out !important;*/
 /*}*/
 
-#index #txt_email:focus {
-    outline: none;
-}
+/*#index #txt_email:focus {*/
+    /*outline: none;*/
+/*}*/
 
 /* Button(Apply, Mentor, Sponsor) Wrapper */
 #index > div {
