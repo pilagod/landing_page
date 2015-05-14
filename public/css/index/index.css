@@ -159,8 +159,8 @@ section {
     background-repeat: no-repeat;
 }
 
-#index #btn_interested{
-    height: 2.5em;
+#index #btn_apply {
+    height: 3em;
     margin-top: -10em;
     opacity: 1;
 
@@ -171,7 +171,7 @@ section {
     transition: all 0.5s ease-in-out;
 }
 
-#index #btn_interested:hover {
+#index #btn_apply:hover {
     cursor: pointer;
     cursor: hand;
 
@@ -182,32 +182,51 @@ section {
     transform: scale(1.1);
 }
 
-#index #txt_email {
-    position: relative;
-    /*display: none;*/
-    /*display: none;*/
-    border: 0;
-    opacity: 0;
-    /*width: 20em;*/
-    width: 0;
-    height: 2.5em;
-    padding: 0 1em;
-    background-image: url("/img/index/border-01.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    margin: 0 auto;
-    top: -6.87em;
-    color: white;
-    z-index: -99;
-    /*margin-top: -6.83em;*/
+/*#index #btn_interested{*/
+    /*height: 2.5em;*/
+    /*margin-top: -10em;*/
+    /*opacity: 1;*/
 
-    -webkit-transition: all 0.5s ease-in-out !important;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out !important;
-}
+    /*-webkit-transition: all 0.5s ease-in-out;*/
+    /*-moz-transition: all 0.5s ease-in-out;*/
+    /*-ms-transition: all 0.5s ease-in-out;*/
+    /*-o-transition: all 0.5s ease-in-out;*/
+    /*transition: all 0.5s ease-in-out;*/
+/*}*/
+
+/*#index #btn_interested:hover {*/
+    /*cursor: pointer;*/
+    /*cursor: hand;*/
+
+    /*-webkit-transform: scale(1.1);*/
+    /*-moz-transform: scale(1.1);*/
+    /*-ms-transform: scale(1.1);*/
+    /*-o-transform: scale(1.1);*/
+    /*transform: scale(1.1);*/
+/*}*/
+
+/*#index #txt_email {*/
+    /*position: relative;*/
+    /*border: 0;*/
+    /*opacity: 0;*/
+    /*width: 0;*/
+    /*height: 2.5em;*/
+    /*padding: 0 1em;*/
+    /*background-image: url("/img/index/border-01.svg");*/
+    /*background-size: 100% 100%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-color: transparent;*/
+    /*margin: 0 auto;*/
+    /*top: -6.87em;*/
+    /*color: white;*/
+    /*z-index: -99;*/
+
+    /*-webkit-transition: all 0.5s ease-in-out !important;*/
+    /*-moz-transition: all 0.5s ease-in-out;*/
+    /*-ms-transition: all 0.5s ease-in-out;*/
+    /*-o-transition: all 0.5s ease-in-out;*/
+    /*transition: all 0.5s ease-in-out !important;*/
+/*}*/
 
 #index #txt_email:focus {
     outline: none;

@@ -110,31 +110,26 @@ var Footer = React.createClass({displayName: "Footer",
     }
 });
 
-//<img src="/img/index/apply_button.png"/>
-//<img src="/img/index/mentor_button.png"/>
-//<img src="/img/index/sponsor_button.png"/>
-
-//<img className="background-image" src="/img/index/bg1.png"/>
+//<img id="btn_interested" src="/img/index/interest-01-2.svg" onClick={this.onBtnInterestedClick}/>
+//<input id="txt_email" type="text" placeholder="Enter your email to subscribe."/>
 
 var Index = React.createClass({displayName: "Index",
-    onBtnInterestedClick:function(){
-        $('#btn_interested').css('opacity', '0');
-        $('#btn_interested').css('z-index', '-99');
-        $('#txt_email').css('width', '20em');
-        $('#txt_email').css('opacity', '1');
-        $('#txt_email').css("z-index", '0');
-        $('#txt_email').focus();
-        //$('#txt_email').css();
-
-        //$('#txt_email').css('')
-    },
+    //onBtnInterestedClick:function(){
+    //    $('#btn_interested').css('opacity', '0');
+    //    $('#btn_interested').css('z-index', '-99');
+    //    $('#txt_email').css('width', '20em');
+    //    $('#txt_email').css('opacity', '1');
+    //    $('#txt_email').css("z-index", '0');
+    //    $('#txt_email').focus();
+    //},
     render: function(){
         return(
             React.createElement("section", {id: "index"}, 
                 React.createElement("img", {className: "background-image", src: "/img/index/bg1.png"}), 
                 React.createElement("div", {className: "text-center"}, 
-                    React.createElement("img", {id: "btn_interested", src: "/img/index/interest-01-2.svg", onClick: this.onBtnInterestedClick}), 
-                    React.createElement("input", {id: "txt_email", type: "text", placeholder: "Enter your email to subscribe."})
+                    React.createElement("a", {href: "https://www.accupass.com/go/2015hackntu", target: "_blank"}, 
+                        React.createElement("img", {id: "btn_apply", src: "/img/index/apply-01.svg"})
+                    )
                 )
             )
         )
