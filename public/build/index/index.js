@@ -177,7 +177,9 @@ var Invitation = React.createClass({displayName: "Invitation",
     render: function(){
         var invitedTeamNode = this.state.data.map(function(team, i){
             return (
-                React.createElement("img", {key: i, src: team.img_src})
+                React.createElement("a", {href: team.invitation_url},
+                    React.createElement("img", {key: i, src: team.img_src})
+                )
             )
         });
         return(

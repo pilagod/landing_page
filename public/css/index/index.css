@@ -261,7 +261,7 @@ section {
 /*******************************/
 
 /* Team Logo */
-#invitation > .content > img {
+#invitation > .content > a > img {
     margin: 1em 5%;
     width: 20%;
 }
