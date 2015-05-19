@@ -172,7 +172,7 @@ var Invitation = React.createClass({
     render: function(){
         var invitedTeamNode = this.state.data.map(function(team, i){
             return (
-                <a href={team.invitation_url}><img key={i} src={team.img_src}/></a>
+                <a href={team.invitation_url} target="_blank"><img key={i} src={team.img_src}/></a>
             )
         });
         return(
