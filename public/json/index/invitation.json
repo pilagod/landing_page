@@ -6,5 +6,6 @@
   {"img_src": "/img/index/invitation/treehacks.png","invitation_url":"https://www.treehacks.com/"},
   {"img_src": "/img/index/invitation/UniqueHackDay.svg","invitation_url":"http://hacks.hustunique.com"},
   {"img_src": "/img/index/invitation/hackTheNorth.png","invitation_url":"http://hackthenorth.com/"},
-  {"img_src": "/img/index/invitation/globalHackathonSeoul.jpg","invitation_url":"https://seoul.globalhackathon.io"}
+  {"img_src": "/img/index/invitation/globalHackathonSeoul.jpg","invitation_url":"https://seoul.globalhackathon.io"},
+  {"img_src": "/img/index/invitation/hackUST.jpg","invitation_url":"http://hack.ust.hk"}
 ]
