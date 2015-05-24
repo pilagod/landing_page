@@ -56,8 +56,13 @@ var Main = React.createClass({
             <div>
                 <Index />
                 <Intro />
-                <Invitation url="/json/index/invitation.json"/>
+                <Scale />
+                <Schedule />
+                <Prize />
+                <Invitation url="/json/index/invitation.json" headerImg="/img/index/invitation.png"/>
                 <Faq url="/json/index/faq.json"/>
+                <Invitation url="/json/index/sponsor.json" headerImg="/img/index/sponsor_bar.png"/>
+                <Invitation url="/json/index/support.json" headerImg="/img/index/support_bar.png"/>
             </div>
         )
     }
@@ -145,7 +150,10 @@ var Intro = React.createClass({
                     <img className="pull-left" src="/img/index/left_double_quot.png"/>
                     <img className="pull-right" src="/img/index/right_double_quot.png"/>
                     <div>
-                        <p>HackNTU holds an annual hackathon for young hackers around the world. Attending 2015HackNTU gives you an opportunity to share your innovation and create things from scratch with talented hackers from all around the world. Join us, and get inspired!</p>
+                        <p>Join 2015HackNTU this August to realize your innovative ideas from scratch with talented hackers around the world.</p>
+                        <p>With the topic ‘’Hack Into The City’’, we are looking forward to ideas that can make cities ‘’smarter’’. Nowadays, cities face more challenges than ever, e.g. climate change, aging populations, public transportation and urban regeneration etc. By the power of imagination and programming, we are looking forward to making cities more convenient, clever, and friendly.</p>
+                        <p>We believe that 2015HackNTU can be a start of great innovations as a hub of talents, so hackers are encouraged to meet new friends during the hackathon and keep working on projects afterward.</p>
+                        <p>Apply now to be a hacker into the city!</p>
                     </div>
                 </div>
             </section>
@@ -153,6 +161,46 @@ var Intro = React.createClass({
     }
 });
 
+var Scale = React.createClass({
+   render: function(){
+       return(
+           <section id="scale">
+               <img className="header" src="/img/index/scale_bar.png"/>
+               <div>
+                    <img src="/img/index/scale.png"/>
+               </div>
+           </section>
+       )
+   }
+});
+
+var Schedule = React.createClass({
+    render: function(){
+        return(
+            <section id="schedule">
+                <img className="header" src="/img/index/schedule_bar.png"/>
+                <div className="content">
+                    <img src="/img/index/schedule.png"/>
+                </div>
+            </section>
+        )
+    }
+});
+
+var Prize = React.createClass({
+    render: function(){
+        return(
+            <section id="schedule">
+                <img className="header" src="/img/index/prize_bar.png"/>
+                <div>
+                    <img src="/img/index/prize.png"/>
+                </div>
+            </section>
+        )
+    }
+});
+
+// And Sponsor
 var Invitation = React.createClass({
     getInitialState: function(){
         return({data: []})
@@ -172,12 +220,14 @@ var Invitation = React.createClass({
     render: function(){
         var invitedTeamNode = this.state.data.map(function(team, i){
             return (
-                <a href={team.invitation_url} target="_blank"><img key={i} src={team.img_src}/></a>
+                <a href={team.invitation_url} target="_blank">
+                    <img key={i} src={team.img_src}/>
+                </a>
             )
         });
         return(
             <section id="invitation">
-                <img className="header" src="/img/index/invitation.png"/>
+                <img className="header" src={this.props.headerImg}/>
                 <div className="content">
                     {invitedTeamNode}
                 </div>

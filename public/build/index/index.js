@@ -56,8 +56,13 @@ var Main = React.createClass({displayName: "Main",
             React.createElement("div", null, 
                 React.createElement(Index, null), 
                 React.createElement(Intro, null), 
-                React.createElement(Invitation, {url: "/json/index/invitation.json"}), 
-                React.createElement(Faq, {url: "/json/index/faq.json"})
+                React.createElement(Scale, null), 
+                React.createElement(Schedule, null), 
+                React.createElement(Prize, null), 
+                React.createElement(Invitation, {url: "/json/index/invitation.json", headerImg: "/img/index/invitation.png"}), 
+                React.createElement(Faq, {url: "/json/index/faq.json"}), 
+                React.createElement(Invitation, {url: "/json/index/sponsor.json", headerImg: "/img/index/sponsor_bar.png"}), 
+                React.createElement(Invitation, {url: "/json/index/support.json", headerImg: "/img/index/support_bar.png"})
             )
         )
     }
@@ -145,7 +150,10 @@ var Intro = React.createClass({displayName: "Intro",
                     React.createElement("img", {className: "pull-left", src: "/img/index/left_double_quot.png"}), 
                     React.createElement("img", {className: "pull-right", src: "/img/index/right_double_quot.png"}), 
                     React.createElement("div", null, 
-                        React.createElement("p", null, "HackNTU holds an annual hackathon for young hackers around the world. Attending 2015HackNTU gives you an opportunity to share your innovation and create things from scratch with talented hackers from all around the world. Join us, and get inspired!")
+                        React.createElement("p", null, "Join 2015HackNTU this August to realize your innovative ideas from scratch with talented hackers around the world."), 
+                        React.createElement("p", null, "With the topic ‘’Hack Into The City’’, we are looking forward to ideas that can make cities ‘’smarter’’. Nowadays, cities face more challenges than ever, e.g. climate change, aging populations, public transportation and urban regeneration etc. By the power of imagination and programming, we are looking forward to making cities more convenient, clever, and friendly."), 
+                        React.createElement("p", null, "We believe that 2015HackNTU can be a start of great innovations as a hub of talents, so hackers are encouraged to meet new friends during the hackathon and keep working on projects afterward."), 
+                        React.createElement("p", null, "Apply now to be a hacker into the city!")
                     )
                 )
             )
@@ -153,6 +161,46 @@ var Intro = React.createClass({displayName: "Intro",
     }
 });
 
+var Scale = React.createClass({displayName: "Scale",
+   render: function(){
+       return(
+           React.createElement("section", {id: "scale"}, 
+               React.createElement("img", {className: "header", src: "/img/index/scale_bar.png"}), 
+               React.createElement("div", null, 
+                    React.createElement("img", {src: "/img/index/scale.png"})
+               )
+           )
+       )
+   }
+});
+
+var Schedule = React.createClass({displayName: "Schedule",
+    render: function(){
+        return(
+            React.createElement("section", {id: "schedule"}, 
+                React.createElement("img", {className: "header", src: "/img/index/schedule_bar.png"}), 
+                React.createElement("div", {className: "content"}, 
+                    React.createElement("img", {src: "/img/index/schedule.png"})
+                )
+            )
+        )
+    }
+});
+
+var Prize = React.createClass({displayName: "Prize",
+    render: function(){
+        return(
+            React.createElement("section", {id: "schedule"}, 
+                React.createElement("img", {className: "header", src: "/img/index/prize_bar.png"}), 
+                React.createElement("div", null, 
+                    React.createElement("img", {src: "/img/index/prize.png"})
+                )
+            )
+        )
+    }
+});
+
+// And Sponsor
 var Invitation = React.createClass({displayName: "Invitation",
     getInitialState: function(){
         return({data: []})
@@ -172,12 +220,14 @@ var Invitation = React.createClass({displayName: "Invitation",
     render: function(){
         var invitedTeamNode = this.state.data.map(function(team, i){
             return (
-                React.createElement("a", {href: team.invitation_url, target: "_blank"}, React.createElement("img", {key: i, src: team.img_src}))
+                React.createElement("a", {href: team.invitation_url, target: "_blank"}, 
+                    React.createElement("img", {key: i, src: team.img_src})
+                )
             )
         });
         return(
             React.createElement("section", {id: "invitation"}, 
-                React.createElement("img", {className: "header", src: "/img/index/invitation.png"}), 
+                React.createElement("img", {className: "header", src: this.props.headerImg}), 
                 React.createElement("div", {className: "content"}, 
                     invitedTeamNode
                 )
