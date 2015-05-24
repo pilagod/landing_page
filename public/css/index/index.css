@@ -282,11 +282,19 @@ section {
 }
 
 /*******************************/
+/*          Schedule           */
+/*******************************/
+
+#schedule div>img {
+    width: 100%;
+}
+
+/*******************************/
 /*         Invitation          */
 /*******************************/
 
 /* Team Logo */
-#invitation > .content > a >img {
+#invitation > .content img {
     margin: 1em 5%;
     width: 20%;
 }
@@ -302,6 +310,24 @@ section {
     margin: 0 1.5%;
     padding-bottom: 2em;
     width: 30%;
+}
+
+/*******************************/
+/*          Sponsor            */
+/*******************************/
+
+#sponsor > .content img {
+    margin: 1em 5%;
+    width: 20%;
+}
+
+/*******************************/
+/*          Support            */
+/*******************************/
+
+#support > .content img {
+    margin: 1em 5%;
+    width: 20%;
 }
 
 /*******************************/

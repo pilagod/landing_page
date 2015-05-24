@@ -6,9 +6,6 @@
 /*          Main Page          */
 /*******************************/
 
-
-
-
 var Navbar = React.createClass({
     getInitialState: function(){
         return({data: []})
@@ -56,13 +53,13 @@ var Main = React.createClass({
             <div>
                 <Index />
                 <Intro />
-                <Scale />
-                <Schedule />
-                <Prize />
-                <Invitation url="/json/index/invitation.json" headerImg="/img/index/invitation.png"/>
+                <Info id="scale" headerImg="/img/index/scale_bar.png" contentImg="/img/index/scale.png"/>
+                <Info id="schedule" headerImg="/img/index/schedule_bar.png" contentImg="/img/index/schedule.png"/>
+                <Info id="prize" headerImg="/img/index/prize_bar.png" contentImg="/img/index/prize.png"/>
+                <Invitation id="invitation" headerImg="/img/index/invitation.png" url="/json/index/invitation.json"/>
                 <Faq url="/json/index/faq.json"/>
-                <Invitation url="/json/index/sponsor.json" headerImg="/img/index/sponsor_bar.png"/>
-                <Invitation url="/json/index/support.json" headerImg="/img/index/support_bar.png"/>
+                <Invitation id="sponsor" headerImg="/img/index/sponsor_bar.png" url="/json/index/sponsor.json"/>
+                <Invitation id="support" headerImg="/img/index/support_bar.png" url="/json/index/support.json"/>
             </div>
         )
     }
@@ -161,46 +158,20 @@ var Intro = React.createClass({
     }
 });
 
-var Scale = React.createClass({
-   render: function(){
-       return(
-           <section id="scale">
-               <img className="header" src="/img/index/scale_bar.png"/>
-               <div>
-                    <img src="/img/index/scale.png"/>
-               </div>
-           </section>
-       )
-   }
-});
-
-var Schedule = React.createClass({
+var Info = React.createClass({
     render: function(){
         return(
-            <section id="schedule">
-                <img className="header" src="/img/index/schedule_bar.png"/>
-                <div className="content">
-                    <img src="/img/index/schedule.png"/>
-                </div>
-            </section>
-        )
-    }
-});
-
-var Prize = React.createClass({
-    render: function(){
-        return(
-            <section id="schedule">
-                <img className="header" src="/img/index/prize_bar.png"/>
+            <section id={this.props.id}>
+                <img className="header" src={this.props.headerImg}/>
                 <div>
-                    <img src="/img/index/prize.png"/>
+                    <img src={this.props.contentImg}/>
                 </div>
             </section>
         )
     }
 });
 
-// And Sponsor
+// All Invitation
 var Invitation = React.createClass({
     getInitialState: function(){
         return({data: []})
@@ -218,15 +189,23 @@ var Invitation = React.createClass({
         })
     },
     render: function(){
-        var invitedTeamNode = this.state.data.map(function(team, i){
-            return (
-                <a href={team.invitation_url} target="_blank">
-                    <img key={i} src={team.img_src}/>
-                </a>
-            )
+        var invitedTeamNode = this.state.data.map(function(invitee, i){
+            if(invitee.invitation_url != ""){
+                return (
+                    <a href={invitee.invitation_url} target="_blank">
+                        <img key={i} src={invitee.img_src}/>
+                    </a>
+                )
+            }
+            else {
+                return (
+                    <img key={i} src={invitee.img_src}/>
+                )
+            }
+
         });
         return(
-            <section id="invitation">
+            <section id={this.props.id}>
                 <img className="header" src={this.props.headerImg}/>
                 <div className="content">
                     {invitedTeamNode}

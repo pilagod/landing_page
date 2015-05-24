@@ -6,9 +6,6 @@
 /*          Main Page          */
 /*******************************/
 
-
-
-
 var Navbar = React.createClass({displayName: "Navbar",
     getInitialState: function(){
         return({data: []})
@@ -56,13 +53,13 @@ var Main = React.createClass({displayName: "Main",
             React.createElement("div", null, 
                 React.createElement(Index, null), 
                 React.createElement(Intro, null), 
-                React.createElement(Scale, null), 
-                React.createElement(Schedule, null), 
-                React.createElement(Prize, null), 
-                React.createElement(Invitation, {url: "/json/index/invitation.json", headerImg: "/img/index/invitation.png"}), 
+                React.createElement(Info, {id: "scale", headerImg: "/img/index/scale_bar.png", contentImg: "/img/index/scale.png"}), 
+                React.createElement(Info, {id: "schedule", headerImg: "/img/index/schedule_bar.png", contentImg: "/img/index/schedule.png"}), 
+                React.createElement(Info, {id: "prize", headerImg: "/img/index/prize_bar.png", contentImg: "/img/index/prize.png"}), 
+                React.createElement(Invitation, {id: "invitation", headerImg: "/img/index/invitation.png", url: "/json/index/invitation.json"}), 
                 React.createElement(Faq, {url: "/json/index/faq.json"}), 
-                React.createElement(Invitation, {url: "/json/index/sponsor.json", headerImg: "/img/index/sponsor_bar.png"}), 
-                React.createElement(Invitation, {url: "/json/index/support.json", headerImg: "/img/index/support_bar.png"})
+                React.createElement(Invitation, {id: "sponsor", headerImg: "/img/index/sponsor_bar.png", url: "/json/index/sponsor.json"}), 
+                React.createElement(Invitation, {id: "support", headerImg: "/img/index/support_bar.png", url: "/json/index/support.json"})
             )
         )
     }
@@ -161,46 +158,20 @@ var Intro = React.createClass({displayName: "Intro",
     }
 });
 
-var Scale = React.createClass({displayName: "Scale",
-   render: function(){
-       return(
-           React.createElement("section", {id: "scale"}, 
-               React.createElement("img", {className: "header", src: "/img/index/scale_bar.png"}), 
-               React.createElement("div", null, 
-                    React.createElement("img", {src: "/img/index/scale.png"})
-               )
-           )
-       )
-   }
-});
-
-var Schedule = React.createClass({displayName: "Schedule",
+var Info = React.createClass({displayName: "Info",
     render: function(){
         return(
-            React.createElement("section", {id: "schedule"}, 
-                React.createElement("img", {className: "header", src: "/img/index/schedule_bar.png"}), 
-                React.createElement("div", {className: "content"}, 
-                    React.createElement("img", {src: "/img/index/schedule.png"})
-                )
-            )
-        )
-    }
-});
-
-var Prize = React.createClass({displayName: "Prize",
-    render: function(){
-        return(
-            React.createElement("section", {id: "schedule"}, 
-                React.createElement("img", {className: "header", src: "/img/index/prize_bar.png"}), 
+            React.createElement("section", {id: this.props.id}, 
+                React.createElement("img", {className: "header", src: this.props.headerImg}), 
                 React.createElement("div", null, 
-                    React.createElement("img", {src: "/img/index/prize.png"})
+                    React.createElement("img", {src: this.props.contentImg})
                 )
             )
         )
     }
 });
 
-// And Sponsor
+// All Invitation
 var Invitation = React.createClass({displayName: "Invitation",
     getInitialState: function(){
         return({data: []})
@@ -218,15 +189,23 @@ var Invitation = React.createClass({displayName: "Invitation",
         })
     },
     render: function(){
-        var invitedTeamNode = this.state.data.map(function(team, i){
-            return (
-                React.createElement("a", {href: team.invitation_url, target: "_blank"}, 
-                    React.createElement("img", {key: i, src: team.img_src})
+        var invitedTeamNode = this.state.data.map(function(invitee, i){
+            if(invitee.invitation_url != ""){
+                return (
+                    React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
+                        React.createElement("img", {key: i, src: invitee.img_src})
+                    )
                 )
-            )
+            }
+            else {
+                return (
+                    React.createElement("img", {key: i, src: invitee.img_src})
+                )
+            }
+
         });
         return(
-            React.createElement("section", {id: "invitation"}, 
+            React.createElement("section", {id: this.props.id}, 
                 React.createElement("img", {className: "header", src: this.props.headerImg}), 
                 React.createElement("div", {className: "content"}, 
                     invitedTeamNode
