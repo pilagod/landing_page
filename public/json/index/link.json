@@ -1,6 +1,11 @@
 [
   {"title": "Home", "url": "#home"},
   {"title": "Intro", "url": "#intro"},
+  {"title": "Scale", "url": "#scale"},
+  {"title": "Schedule", "url": "#schedule"},
+  {"title": "Prize", "url": "#prize"},
   {"title": "Invitation", "url": "#invitation"},
-  {"title": "FAQ", "url": "#faq"}
+  {"title": "FAQ", "url": "#faq"},
+  {"title": "Sponsors", "url": "#sponsor"},
+  {"title": "Support", "url": "#support"}
 ]

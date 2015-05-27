@@ -42,6 +42,18 @@ a, a:hover {
 
 ul {
     list-style-type: none;
+
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    -ms-padding-start: 0;
+    -o-padding-start: 0;
+    padding-start: 0;
+
+    -webkit-padding-end: 0;
+    -moz-padding-end: 0;
+    -ms-padding-end: 0;
+    -o-padding-end: 0;
+    padding-end: 0;
 }
 
 img {
@@ -91,17 +103,17 @@ section {
 #navbar > nav ul {
     display: inline;
 
-    -webkit-padding-start: 40px;
-    -moz-padding-start: 40px;
-    -ms-padding-start: 40px;
-    -o-padding-start: 40px;
-    padding-start: 40px;
+    /*-webkit-padding-start: 40px;*/
+    /*-moz-padding-start: 40px;*/
+    /*-ms-padding-start: 40px;*/
+    /*-o-padding-start: 40px;*/
+    /*padding-start: 40px;*/
 
-    -webkit-padding-end: 40px;
-    -moz-padding-end: 40px;
-    -ms-padding-end: 40px;
-    -o-padding-end: 40px;
-    padding-end: 40px;
+    /*-webkit-padding-end: 40px;*/
+    /*-moz-padding-end: 40px;*/
+    /*-ms-padding-end: 40px;*/
+    /*-o-padding-end: 40px;*/
+    /*padding-end: 40px;*/
 }
 
 #navbar > nav ul>li {
@@ -170,11 +182,11 @@ section {
     margin-top: -10em;
     opacity: 1;
 
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #index #btn_apply:hover {
@@ -362,7 +374,11 @@ section {
     margin: 1em 0;
 }
 
-#footer > footer > div.content > ul:nth-child(2) > li {
+#footer > footer > div.content > div {
+    margin: 0 1em;
+}
+
+#footer > footer > div.content > div.contact > ul > li {
     display: inline;
     margin: 0 0.1em;
 }

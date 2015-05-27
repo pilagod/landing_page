@@ -90,17 +90,40 @@ var Footer = React.createClass({
                 </li>
             )
         }.bind(this));
+
+        var tempCol = [];
+        var col = [];
+
+        for(var i = 1; i <= footerLinkNode.length; i++){
+            tempCol.push(footerLinkNode[i-1]);
+            if(i % 5 == 0) {
+                col.push(tempCol);
+                tempCol = [];
+            }
+        }
+
+        if(tempCol != []){
+            col.push(tempCol);
+            tempCol = [];
+        }
+
         return(
             <footer>
                 <img className="background-image" src="/img/index/footer.png"/>
                 <div className="content">
-                    <ul>
-                        {footerLinkNode}
-                    </ul>
-                    <ul>
-                        <li><a href="https://www.facebook.com/hackNTU" target="_blank"><i className="fa fa-facebook-square fa-lg"></i></a></li>
-                        <li><a href="mailto:hackntu@gmail.com"><i className="fa fa-envelope-square fa-lg"></i></a></li>
-                    </ul>
+                    {col.map(function(liObjectArray, i){
+                        return (
+                            <div className="text-vertical-center">
+                                <ul>{liObjectArray}</ul>
+                            </div>
+                        )
+                    })}
+                    <div className="contact">
+                        <ul>
+                            <li><a href="https://www.facebook.com/hackNTU" target="_blank"><i className="fa fa-facebook-square fa-lg"></i></a></li>
+                            <li><a href="mailto:hackntu@gmail.com"><i className="fa fa-envelope-square fa-lg"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="copyright">
                     <span>Copyright</span>
@@ -115,6 +138,9 @@ var Footer = React.createClass({
 //<img id="btn_interested" src="/img/index/interest-01-2.svg" onClick={this.onBtnInterestedClick}/>
 //<input id="txt_email" type="text" placeholder="Enter your email to subscribe."/>
 
+
+//<a href="https://www.accupass.com/go/2015hackntu" target="_blank"></a>
+
 var Index = React.createClass({
     //onBtnInterestedClick:function(){
     //    $('#btn_interested').css('opacity', '0');
@@ -124,14 +150,15 @@ var Index = React.createClass({
     //    $('#txt_email').css("z-index", '0');
     //    $('#txt_email').focus();
     //},
+    btnApplyOnClick: function(){
+
+    },
     render: function(){
         return(
             <section id="index">
                 <img className="background-image" src="/img/index/bg1.png"/>
                 <div className="text-center">
-                    <a href="https://www.accupass.com/go/2015hackntu" target="_blank">
-                        <img id="btn_apply" src="/img/index/apply-01.svg"/>
-                    </a>
+                    <img id="btn_apply" src="/img/index/apply-01.svg"/>
                 </div>
             </section>
         )
