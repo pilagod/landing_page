@@ -91,8 +91,7 @@ var Footer = React.createClass({
             )
         }.bind(this));
 
-        var tempCol = [];
-        var col = [];
+        var tempCol = [], col = [];
 
         for(var i = 1; i <= footerLinkNode.length; i++){
             tempCol.push(footerLinkNode[i-1]);
@@ -102,10 +101,8 @@ var Footer = React.createClass({
             }
         }
 
-        if(tempCol != []){
+        if(tempCol != [])
             col.push(tempCol);
-            tempCol = [];
-        }
 
         return(
             <footer>
@@ -151,14 +148,22 @@ var Index = React.createClass({
     //    $('#txt_email').focus();
     //},
     btnApplyOnClick: function(){
-
+        $('#btn_apply').css('width', '0');
+        $('#btn_taiwan').css('width', '10em');
+        $('#btn_foreign').css('width', '10em');
     },
     render: function(){
         return(
             <section id="index">
                 <img className="background-image" src="/img/index/bg1.png"/>
                 <div className="text-center">
-                    <img id="btn_apply" src="/img/index/apply-01.svg"/>
+                    <img id="btn_apply" src="/img/index/apply-01.svg" onClick={this.btnApplyOnClick}/>
+                    <a href="https://www.accupass.com/go/2015hackntu" target="_blank">
+                        <img id="btn_taiwan" src="/img/index/taiwan-01.svg"/>
+                    </a>
+                    <a href="http://www.accupass.com/event/register/1505141917107287993140" target="_blank">
+                        <img id="btn_foreign" src="/img/index/foreign-01.svg"/>
+                    </a>
                 </div>
             </section>
         )

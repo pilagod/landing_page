@@ -91,8 +91,7 @@ var Footer = React.createClass({displayName: "Footer",
             )
         }.bind(this));
 
-        var tempCol = [];
-        var col = [];
+        var tempCol = [], col = [];
 
         for(var i = 1; i <= footerLinkNode.length; i++){
             tempCol.push(footerLinkNode[i-1]);
@@ -102,10 +101,8 @@ var Footer = React.createClass({displayName: "Footer",
             }
         }
 
-        if(tempCol != []){
+        if(tempCol != [])
             col.push(tempCol);
-            tempCol = [];
-        }
 
         return(
             React.createElement("footer", null, 
@@ -151,14 +148,22 @@ var Index = React.createClass({displayName: "Index",
     //    $('#txt_email').focus();
     //},
     btnApplyOnClick: function(){
-
+        $('#btn_apply').css('width', '0');
+        $('#btn_taiwan').css('width', '10em');
+        $('#btn_foreign').css('width', '10em');
     },
     render: function(){
         return(
             React.createElement("section", {id: "index"}, 
                 React.createElement("img", {className: "background-image", src: "/img/index/bg1.png"}), 
                 React.createElement("div", {className: "text-center"}, 
-                    React.createElement("img", {id: "btn_apply", src: "/img/index/apply-01.svg"})
+                    React.createElement("img", {id: "btn_apply", src: "/img/index/apply-01.svg", onClick: this.btnApplyOnClick}), 
+                    React.createElement("a", {href: "https://www.accupass.com/go/2015hackntu", target: "_blank"}, 
+                        React.createElement("img", {id: "btn_taiwan", src: "/img/index/taiwan-01.svg"})
+                    ), 
+                    React.createElement("a", {href: "http://www.accupass.com/event/register/1505141917107287993140", target: "_blank"}, 
+                        React.createElement("img", {id: "btn_foreign", src: "/img/index/foreign-01.svg"})
+                    )
                 )
             )
         )
