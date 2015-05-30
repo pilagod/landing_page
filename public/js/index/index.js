@@ -220,30 +220,60 @@ var Invitation = React.createClass({
             }.bind(this)
         })
     },
-    render: function(){
-        var invitedTeamNode = this.state.data.map(function(invitee, i){
-            if(invitee.invitation_url != ""){
-                return (
-                    <a href={invitee.invitation_url} target="_blank">
-                        <img key={i} src={invitee.img_src}/>
-                    </a>
-                )
-            }
-            else {
-                return (
-                    <img key={i} src={invitee.img_src}/>
-                )
-            }
 
-        });
+    render: function(){
+
+        var inviteeNode = [];
+
+        if(this.state.data.constructor !== Array){
+            for(var index in this.state.data){
+                inviteeNode.push(this.state.data[index].map(function(invitee, i){
+                    if(invitee.invitation_url != ""){
+                        return (
+                            <a href={invitee.invitation_url} target="_blank">
+                                <img key={i} src={invitee.img_src}/>
+                            </a>
+                        )
+                    }
+                    else {
+                        return (
+                            <img key={i} src={invitee.img_src}/>
+                        )
+                    }
+                }));
+            }
+        }
+        else{
+            inviteeNode.push(this.state.data.map(function(invitee, i){
+                if(invitee.invitation_url != ""){
+                    return (
+                        <a href={invitee.invitation_url} target="_blank">
+                            <img key={i} src={invitee.img_src}/>
+                        </a>
+                    )
+                }
+                else {
+                    return (
+                        <img key={i} src={invitee.img_src}/>
+                    )
+                }
+            }));
+        }
+        //console.log(inviteeNode);
+
         return(
             <section id={this.props.id}>
                 <img className="header" src={this.props.headerImg}/>
                 <div className="content">
-                    {invitedTeamNode}
+                    {inviteeNode.map(function(inviteeSubNode, i){
+                        return(
+                            <div key={i}>{inviteeSubNode}</div>
+                        )
+                    })}
                 </div>
             </section>
         )
+
     }
 });
 
@@ -285,7 +315,6 @@ var Faq = React.createClass({
                     <p><b><h5>Can’t find answers to your question &#63;</h5></b></p>
                     <p><b><h5>Feel free to contact us through email or via Facebook messages.</h5></b></p>
                 </div>
-
             </section>
         )
     }

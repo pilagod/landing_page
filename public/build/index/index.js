@@ -220,30 +220,60 @@ var Invitation = React.createClass({displayName: "Invitation",
             }.bind(this)
         })
     },
+
     render: function(){
-        var invitedTeamNode = this.state.data.map(function(invitee, i){
-            if(invitee.invitation_url != ""){
-                return (
-                    React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
+
+        var inviteeNode = [];
+
+        if(this.state.data.constructor !== Array){
+            for(var index in this.state.data){
+                inviteeNode.push(this.state.data[index].map(function(invitee, i){
+                    if(invitee.invitation_url != ""){
+                        return (
+                            React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
+                                React.createElement("img", {key: i, src: invitee.img_src})
+                            )
+                        )
+                    }
+                    else {
+                        return (
+                            React.createElement("img", {key: i, src: invitee.img_src})
+                        )
+                    }
+                }));
+            }
+        }
+        else{
+            inviteeNode.push(this.state.data.map(function(invitee, i){
+                if(invitee.invitation_url != ""){
+                    return (
+                        React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
+                            React.createElement("img", {key: i, src: invitee.img_src})
+                        )
+                    )
+                }
+                else {
+                    return (
                         React.createElement("img", {key: i, src: invitee.img_src})
                     )
-                )
-            }
-            else {
-                return (
-                    React.createElement("img", {key: i, src: invitee.img_src})
-                )
-            }
+                }
+            }));
+        }
+        //console.log(inviteeNode);
 
-        });
         return(
             React.createElement("section", {id: this.props.id}, 
                 React.createElement("img", {className: "header", src: this.props.headerImg}), 
                 React.createElement("div", {className: "content"}, 
-                    invitedTeamNode
+                    inviteeNode.map(function(inviteeSubNode, i){
+                        return(
+                            React.createElement("div", {key: i}, inviteeSubNode)
+                        )
+                    })
                 )
             )
         )
+
     }
 });
 
@@ -285,7 +315,6 @@ var Faq = React.createClass({displayName: "Faq",
                     React.createElement("p", null, React.createElement("b", null, React.createElement("h5", null, "Can’t find answers to your question ?"))), 
                     React.createElement("p", null, React.createElement("b", null, React.createElement("h5", null, "Feel free to contact us through email or via Facebook messages.")))
                 )
-
             )
         )
     }

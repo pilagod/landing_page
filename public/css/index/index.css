@@ -342,6 +342,15 @@ section {
     width: 20%;
 }
 
+/* For Diamond Sponsor*/
+#sponsor > .content > div:first-child {
+    margin-bottom: 5em;
+}
+
+#sponsor > .content > div:first-child img {
+    width: 28%;
+}
+
 /*******************************/
 /*          Support            */
 /*******************************/

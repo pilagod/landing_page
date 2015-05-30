@@ -1,5 +1,30 @@
-[
-  {"img_src": "/img/index/sponsor/tutorABC.png","invitation_url":""},
-  {"img_src": "/img/index/sponsor/178.png","invitation_url":""},
-  {"img_src": "/img/index/sponsor/sudo.jpg","invitation_url":""}
-]
+{
+  "diamond": [
+    {
+      "img_src": "/img/index/sponsor/tutorABC.png",
+      "invitation_url": "http://www.tutorabc.com/aspx/mvc"
+    },
+    {
+      "img_src": "/img/index/sponsor/sudo.jpg",
+      "invitation_url": "https://sudo.com.tw/"
+    }
+  ],
+  "ruby": [
+    {
+      "img_src": "/img/index/sponsor/cyberlink.png",
+      "invitation_url": "http://tw.cyberlink.com/"
+    },
+    {
+      "img_src": "/img/index/sponsor/plug_and_play.png",
+      "invitation_url": "http://www.plugandplaytechcenter.com/"
+    },
+    {
+      "img_src": "/img/index/sponsor/178.png",
+      "invitation_url": "http://www.job178.com.tw/"
+    },
+    {
+      "img_src": "/img/index/sponsor/taipei_city.png",
+      "invitation_url": "http://fun.gov.taipei/"
+    }
+  ]
+}
