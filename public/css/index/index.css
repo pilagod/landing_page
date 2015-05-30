@@ -315,9 +315,23 @@ section {
 /*******************************/
 
 /* Team Logo */
-#invitation > .content img {
+#invitation > .content > .content-inner > div,
+#sponsor > .content > .content-inner > div,
+#support > .content > .content-inner > div {
+    position: relative;
+    display: inline-block;
     margin: 1em 5%;
-    width: 20%;
+    width: 23%;
+}
+
+#invitation > .content > .content-inner div.description {
+    margin-top: 0.5em;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
 
 /*******************************/
@@ -337,28 +351,30 @@ section {
 /*          Sponsor            */
 /*******************************/
 
-#sponsor > .content img {
-    margin: 1em 5%;
-    width: 20%;
-}
+/*#sponsor > .content div {*/
+    /*display: inline-block;*/
+    /*margin: 1em 5%;*/
+    /*width: 20%;*/
+/*}*/
 
 /* For Diamond Sponsor*/
-#sponsor > .content > div:first-child {
+#sponsor > .content > .content-inner:first-child {
     margin-bottom: 5em;
 }
 
-#sponsor > .content > div:first-child img {
-    width: 28%;
+#sponsor > .content > .content-inner:first-child > div {
+    width: 30%;
 }
 
 /*******************************/
 /*          Support            */
 /*******************************/
 
-#support > .content img {
-    margin: 1em 5%;
-    width: 20%;
-}
+/*#support > .content div {*/
+    /*display: inline-block;*/
+    /*margin: 1em 5%;*/
+    /*width: 20%;*/
+/*}*/
 
 /*******************************/
 /*          Footer             */

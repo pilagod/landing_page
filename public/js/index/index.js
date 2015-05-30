@@ -110,7 +110,7 @@ var Footer = React.createClass({
                 <div className="content">
                     {col.map(function(liObjectArray, i){
                         return (
-                            <div className="text-vertical-center">
+                            <div key={i} className="text-vertical-center">
                                 <ul>{liObjectArray}</ul>
                             </div>
                         )
@@ -224,42 +224,37 @@ var Invitation = React.createClass({
     render: function(){
 
         var inviteeNode = [];
+        var dataSet = [];
 
-        if(this.state.data.constructor !== Array){
-            for(var index in this.state.data){
-                inviteeNode.push(this.state.data[index].map(function(invitee, i){
-                    if(invitee.invitation_url != ""){
-                        return (
-                            <a href={invitee.invitation_url} target="_blank">
-                                <img key={i} src={invitee.img_src}/>
-                            </a>
-                        )
-                    }
-                    else {
-                        return (
-                            <img key={i} src={invitee.img_src}/>
-                        )
-                    }
-                }));
-            }
-        }
-        else{
-            inviteeNode.push(this.state.data.map(function(invitee, i){
+        // ex: Sponsor has two different type
+        // => JSON Object (which is not Array Object, but its children are.)
+        if(this.state.data.constructor !== Array)
+            dataSet = this.state.data;
+        else
+            dataSet.push(this.state.data);
+
+        for(var index in dataSet){
+            inviteeNode.push(dataSet[index].map(function(invitee, i){
                 if(invitee.invitation_url != ""){
                     return (
-                        <a href={invitee.invitation_url} target="_blank">
-                            <img key={i} src={invitee.img_src}/>
-                        </a>
+                        <div key={i}>
+                            <a href={invitee.invitation_url} target="_blank">
+                                <img src={invitee.img_src}/>
+                            </a>
+                            <div className="description">{invitee.description}</div>
+                        </div>
                     )
                 }
                 else {
                     return (
-                        <img key={i} src={invitee.img_src}/>
+                        <div key={i}>
+                            <img src={invitee.img_src}/>
+                            <div className="description"></div>
+                        </div>
                     )
                 }
             }));
         }
-        //console.log(inviteeNode);
 
         return(
             <section id={this.props.id}>
@@ -267,7 +262,7 @@ var Invitation = React.createClass({
                 <div className="content">
                     {inviteeNode.map(function(inviteeSubNode, i){
                         return(
-                            <div key={i}>{inviteeSubNode}</div>
+                            <div key={i} className="content-inner">{inviteeSubNode}</div>
                         )
                     })}
                 </div>

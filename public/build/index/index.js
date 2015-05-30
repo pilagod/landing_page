@@ -110,7 +110,7 @@ var Footer = React.createClass({displayName: "Footer",
                 React.createElement("div", {className: "content"}, 
                     col.map(function(liObjectArray, i){
                         return (
-                            React.createElement("div", {className: "text-vertical-center"}, 
+                            React.createElement("div", {key: i, className: "text-vertical-center"}, 
                                 React.createElement("ul", null, liObjectArray)
                             )
                         )
@@ -224,42 +224,37 @@ var Invitation = React.createClass({displayName: "Invitation",
     render: function(){
 
         var inviteeNode = [];
+        var dataSet = [];
 
-        if(this.state.data.constructor !== Array){
-            for(var index in this.state.data){
-                inviteeNode.push(this.state.data[index].map(function(invitee, i){
-                    if(invitee.invitation_url != ""){
-                        return (
-                            React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
-                                React.createElement("img", {key: i, src: invitee.img_src})
-                            )
-                        )
-                    }
-                    else {
-                        return (
-                            React.createElement("img", {key: i, src: invitee.img_src})
-                        )
-                    }
-                }));
-            }
-        }
-        else{
-            inviteeNode.push(this.state.data.map(function(invitee, i){
+        // ex: Sponsor has two different type
+        // => JSON Object (which is not Array Object, but its children are.)
+        if(this.state.data.constructor !== Array)
+            dataSet = this.state.data;
+        else
+            dataSet.push(this.state.data);
+
+        for(var index in dataSet){
+            inviteeNode.push(dataSet[index].map(function(invitee, i){
                 if(invitee.invitation_url != ""){
                     return (
-                        React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
-                            React.createElement("img", {key: i, src: invitee.img_src})
+                        React.createElement("div", {key: i}, 
+                            React.createElement("a", {href: invitee.invitation_url, target: "_blank"}, 
+                                React.createElement("img", {src: invitee.img_src})
+                            ), 
+                            React.createElement("div", {className: "description"}, invitee.description)
                         )
                     )
                 }
                 else {
                     return (
-                        React.createElement("img", {key: i, src: invitee.img_src})
+                        React.createElement("div", {key: i}, 
+                            React.createElement("img", {src: invitee.img_src}), 
+                            React.createElement("div", {className: "description"})
+                        )
                     )
                 }
             }));
         }
-        //console.log(inviteeNode);
 
         return(
             React.createElement("section", {id: this.props.id}, 
@@ -267,7 +262,7 @@ var Invitation = React.createClass({displayName: "Invitation",
                 React.createElement("div", {className: "content"}, 
                     inviteeNode.map(function(inviteeSubNode, i){
                         return(
-                            React.createElement("div", {key: i}, inviteeSubNode)
+                            React.createElement("div", {key: i, className: "content-inner"}, inviteeSubNode)
                         )
                     })
                 )

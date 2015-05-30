@@ -2,29 +2,35 @@
   "diamond": [
     {
       "img_src": "/img/index/sponsor/tutorABC.png",
-      "invitation_url": "http://www.tutorabc.com/aspx/mvc"
+      "invitation_url": "http://www.tutorabc.com/aspx/mvc",
+      "description":""
     },
     {
       "img_src": "/img/index/sponsor/sudo.jpg",
-      "invitation_url": "https://sudo.com.tw/"
+      "invitation_url": "https://sudo.com.tw/",
+      "description":""
     }
   ],
   "ruby": [
     {
       "img_src": "/img/index/sponsor/cyberlink.png",
-      "invitation_url": "http://tw.cyberlink.com/"
+      "invitation_url": "http://tw.cyberlink.com/",
+      "description":""
     },
     {
       "img_src": "/img/index/sponsor/plug_and_play.png",
-      "invitation_url": "http://www.plugandplaytechcenter.com/"
+      "invitation_url": "http://www.plugandplaytechcenter.com/",
+      "description":""
     },
     {
       "img_src": "/img/index/sponsor/178.png",
-      "invitation_url": "http://www.job178.com.tw/"
+      "invitation_url": "http://www.job178.com.tw/",
+      "description":""
     },
     {
       "img_src": "/img/index/sponsor/taipei_city.png",
-      "invitation_url": "http://fun.gov.taipei/"
+      "invitation_url": "http://fun.gov.taipei/",
+      "description":""
     }
   ]
 }
