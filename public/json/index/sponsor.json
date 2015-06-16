@@ -36,6 +36,11 @@
       "img_src": "/img/index/sponsor/migo.png",
       "invitation_url": "https://migo.tv/intl/",
       "description":""
+    },
+    {
+      "img_src": "/img/index/sponsor/vpon.png",
+      "invitation_url": "http://www.vpon.com/zh-tw/",
+      "description":""
     }
   ]
 }
