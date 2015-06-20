@@ -41,6 +41,11 @@
       "img_src": "/img/index/sponsor/vpon.png",
       "invitation_url": "http://www.vpon.com/zh-tw/",
       "description":""
+    },
+    {
+      "img_src": "/img/index/sponsor/accupass.png",
+      "invitation_url": "http://www.accupass.com",
+      "description":""
     }
   ]
 }
