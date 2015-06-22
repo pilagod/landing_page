@@ -46,6 +46,11 @@
       "img_src": "/img/index/sponsor/accupass.png",
       "invitation_url": "http://www.accupass.com",
       "description":""
+    },
+    {
+      "img_src": "/img/index/sponsor/neurosky.png",
+      "invitation_url": "http://www.neurosky.com.tw/",
+      "description":""
     }
   ]
 }
