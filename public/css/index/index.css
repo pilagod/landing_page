@@ -63,6 +63,7 @@ img {
 section {
     position: relative;
     width: 100%;
+    min-width: 960px;
     height: auto;
     clear: both;
     z-index: 0;
