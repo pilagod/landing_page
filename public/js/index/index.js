@@ -220,7 +220,6 @@ var Invitation = React.createClass({
             }.bind(this)
         })
     },
-
     render: function(){
 
         var inviteeNode = [];
