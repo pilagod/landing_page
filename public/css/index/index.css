@@ -309,6 +309,7 @@ section {
 #scale div,
 #scale div>img {
     width: 100%;
+    min-width: 960px;
 }
 
 
@@ -319,6 +320,7 @@ section {
 #schedule div,
 #schedule div>img {
     width: 100%;
+    min-width: 960px;
 }
 
 /*******************************/
@@ -328,6 +330,7 @@ section {
 #prize div,
 #prize div>img {
     width: 100%;
+    min-width: 960px;
 }
 
 /*******************************/
